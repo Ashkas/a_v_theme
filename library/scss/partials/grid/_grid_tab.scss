@@ -1,0 +1,83 @@
+/* ------------------------------------------------------ Layout Tablet - 760 - 6 columns */
+	
+.tab_1 {
+	width: 100%*(110/760); /* one columns */
+	float: left;
+}
+
+.tab_2 {
+	width: 100%*(240/760); /* Two columns */
+	float: left;
+}
+
+.tab_3 {
+	width: 100%*(370/760); /* Three columns */
+	max-width:  100%*(370/760); /* Three columns */
+	float: left;
+}
+
+.tab_3_alt {
+	width: 100%*(360/760); /* Three columns */
+	padding-right: 100%*(20/760);
+	margin-right: 100%*(20/760);
+	float: left;
+	
+	&:nth-child(2n+2) {
+		margin-right: 0px;
+		padding-right: 0px;
+	}
+}
+
+.tab_4 {
+	width: 100%*(500/760); /* Four columns */
+	max-width:  100%*(500/760); /* Four columns */
+	float: left;
+}
+
+.tab_5 {
+	width: 100%*(630/760); /* Five columns */
+	max-width: 100%*(630/760); /* Five columns */
+	float: left;
+}
+
+.tab_6 {
+	width: 100%; /* Six columns */
+	float: left;
+}
+
+.mob_col_gutter {
+	margin-right: 0px;
+}
+
+.col_gutter, .large_col_gutter, .tab_col_gutter {
+	margin-right: 100%*(20/760);
+}
+
+/* ------------------------------------------------------ Layout grid - used in columns */
+
+.grid {
+	
+	 @include flexbox();
+	
+	.grid_item {
+		
+		width: 100%;
+		@include flex(1, 6, 20%);
+		margin-bottom: 0px;
+		
+		&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+			margin-left: 100%*(20/760);
+		}
+	}
+	
+	.grid_item_alt {
+		
+		width: 33.33%;
+		@include flex(1, 6, 20%);
+		
+		&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+			width: 66.66%;
+			margin-left: 100%*(20/760);
+		}
+	}
+}

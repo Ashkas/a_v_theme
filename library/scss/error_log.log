@@ -1,0 +1,6 @@
+06/09/14 2:09:27: style-ie.scss - parse error: failed at `backgrou` /home1/ashkasco/public_html/skattle/wp-content/themes/skattle-2014/library/scss/partials/styles/_styles.scss on line 416
+06/09/14 4:49:45: style-ie.scss - parse error: failed at `color: $orange` /home1/ashkasco/public_html/skattle/wp-content/themes/skattle-2014/library/scss/partials/styles/_styles.scss on line 348
+06/09/14 4:49:45: style.scss - parse error: failed at `color: $orange` /home1/ashkasco/public_html/skattle/wp-content/themes/skattle-2014/library/scss/partials/styles/_styles.scss on line 348
+06/09/14 4:50:44: style-ie.scss - parse error: failed at `color: $orange` /home1/ashkasco/public_html/skattle/wp-content/themes/skattle-2014/library/scss/partials/styles/_styles.scss on line 348
+06/09/14 4:50:44: style.scss - parse error: failed at `color: $orange` /home1/ashkasco/public_html/skattle/wp-content/themes/skattle-2014/library/scss/partials/styles/_styles.scss on line 348
+06/16/14 6:16:53: style.scss - unclosed block: failed at `` /home1/ashkasco/public_html/skattle/wp-content/themes/skattle-2014/library/scss/partials/_single_header_animation.scss on line 333

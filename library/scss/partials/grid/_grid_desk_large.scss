@@ -1,0 +1,112 @@
+/* ------------------------------------------------------ Layout Desktop A - 1180 - 12 columns */
+
+.desk_large_1 {
+	width: 100%*(80/1180); /* one columns */
+	float: left;
+}
+
+.desk_large_2 {
+	width: 100%*(180/1180); /* Two columns */
+	float: left;
+}
+
+.desk_large_3 {
+	width: 100%*(280/1180); /* Three columns */
+	float: left;
+}
+
+.desk_large_4 {
+	width: 100%*(380/1180); /* Four columns */
+	max-width: 100%*(380/1180); /* Four columns */
+	float: left;
+}
+
+.desk_large_5 {
+	width: 100%*(480/1180); /* Five columns */
+	max-width: 100%*(480/1180); /* Five columns */
+	float: left;
+}
+
+.desk_large_6 {
+	width: 100%*(580/1180);/* Six columns */
+	max-width: 100%*(580/1180);/* Six columns */
+	float: left;
+}
+
+.desk_large_6_alt {
+	width: 100%*(570/1180);/* Six columns */
+	float: left;
+	padding-right: 100%*(20/1180);
+	margin-right: 100%*(20/1180);
+	
+	&:nth-child(2n+2) {
+		margin-right: 0px;
+		padding-right: 0px;
+	}
+}
+
+.desk_large_7 {
+	width: 100%*(680/1180); /* Seven columns */
+	max-width: 100%*(680/1180); /* Seven columns */
+	float: left;
+}
+
+.desk_large_8 {
+	width: 100%*(780/1180);/* eight columns */
+	max-width: 100%*(780/1180);/* eight columns */
+	float: left;
+}
+
+.desk_large_9 {
+	width: 100%*(880/1180); /* nine columns */
+	max-width: 100%*(880/1180); /* nine columns */
+	float: left;
+}
+
+.desk_large_10 {
+	width: 100%*(980/1180);/* ten columns */
+	max-width: 100%*(980/1180);/* ten columns */
+	float: left;
+}
+
+.desk_large_11 {
+	width: 100%*(1080/1180); /* eleven columns */
+	max-width: 100%*(1080/1180); /* eleven columns */
+	float: left;
+}
+
+.desk_large_12 {
+	width: 100%;/* Twelve columns */
+	max-width: 100%;/* Twelve columns */
+	float: left;
+}
+
+.mob_col_gutter, .tab_col_gutter, .desk_col_gutter {
+	margin-right: 0px;
+}
+
+.col_gutter, .large_col_gutter, .desk_col_gutter, .desk_large_col_gutter {
+	margin-right: 100%*(20/1180);
+}
+
+/* ------------------------------------------------------ Layout grid - used in columns */
+
+.grid_large_device {
+		
+	.grid_item {
+		
+		&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+			margin-left: 100%*(20/1180);
+		}
+	}
+}
+
+.grid {
+		
+	.grid_item {
+		
+		&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4) {
+			margin-left: 100%*(20/1180);
+		}
+	}
+}

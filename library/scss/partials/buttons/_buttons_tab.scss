@@ -1,0 +1,13 @@
+/* ------------------------------------------------------ Buttons */
+
+.button, .alt_button {
+	max-width: u((220rem/16));
+}
+
+.big_button {
+	max-width: u((300rem/16)) !important;
+}
+
+.full_button {
+	max-width: 100% !important;
+}

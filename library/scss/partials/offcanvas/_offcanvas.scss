@@ -1,0 +1,274 @@
+#nav_anchor_container {
+	background: none;
+	
+	.nav_anchors {
+		width: u((100rem/16));
+		margin: 0px;
+		padding: 0;
+		height: u((40rem/16));
+	}
+		
+	.nav_anchors li {
+		text-align: center;
+		font-family: $altFont;
+		@include line-height(40);
+		@include font-size(16);
+		display: inline;
+		list-style-image: none;
+		background: none;
+		font-weight: bold;
+		
+		&:before {
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			content: "";
+			@include font-size(12);
+			margin-left: 0px;
+			padding-right: 0px;
+		}
+		
+		#sidebarButton.active {
+			color: $green;
+			text-shadow: none;
+		}
+		
+		&.nav_search {
+			float: right;
+			margin: .7em .45em 0em 0em;
+			padding-left: 0px;
+			width: 50%; /* Needs width fix, too wide for smartphone */ 
+				
+			label {
+				display: none;
+			}
+			
+			input[type="submit"] {
+				display: none;
+			}
+		}
+	
+		a {
+			color: black;
+			text-shadow: 1px 1px 0px $lightgrey;
+			text-align: center;
+			
+			.icon-list {
+				@include font-size(24);
+				@include line-height(40);
+				margin-right: u((5rem/16));
+				float: left;	
+			}
+			
+			&:focus, &:hover {
+				color: $green;
+				background: none;
+			}
+		}		
+	}
+
+}
+
+.no-js .oc {
+	left: 0px !important;
+	display: none !important;
+	position: relative !important;
+	margin-bottom: 1.0em;
+}
+
+.menu-link ul {	
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	position: relative;
+	z-index: 202;
+	
+	li {
+		display: block;
+		font-family: $titleFont;
+		
+		a {
+			text-transform: uppercase;
+			color: $darkgrey;
+			display: block;
+			font-weight: 400;
+			@include font-size(14);	
+			@include line-height(24);
+			color: $darkgrey;
+			padding-left: 0;			
+			margin-top: u((10rem/16));
+			/* border-bottom: 1px solid #ddd; */
+			
+			&:hover {
+					border-left-color: $green;
+				}
+			}
+
+		&.current-menu-item > a {
+			border-left: 4px solid $green;
+			text-indent: 5px;
+		}
+		
+		&.current-menu-parent > a {
+			border-left: 4px solid $green;
+			text-indent: 5px;
+		}
+	
+		
+		&.current-menu-parent a, &.current-menu-ancestor a {
+			border-left: 4px solid $green;
+			text-indent: 5px;
+		}
+		
+
+		ul.sub-menu {	
+			
+			li {
+				@include font-size(14);
+				text-indent: u((10rem/16));			
+				border-bottom: 1px solid white;
+				
+				a {
+					font-weight: 200;
+					margin-top: 0;
+					border-left: 4px solid $white;
+					color: $darkgrey;
+					
+					&:hover {
+						color: $white;
+						/* border-left: 3px solid $green; */
+						border-left-color: $white;
+					}
+				}
+				
+				&.current-menu-item > a, &.current-menu-ancestor > a {
+					color: $white;
+					border-left-color: $green;
+				}
+				
+				&:first-child{
+					border-top: 1px solid white;
+					/* background: red; */
+				}
+			
+			}
+		}
+	}
+}
+
+/* Manually set up highlight for blog items */
+.single-post {
+	
+	.menu-link {
+		
+		ul {
+		
+			li.menu-item-513 {
+				
+				a {
+					border-left: 4px solid $green;
+					text-indent: 5px;
+				}
+			}
+		}
+	}
+}
+
+/*
+.menu-link ul ~ li {
+	background: red;
+}
+*/
+
+.wrap {
+	height: 100%;
+    left: 0;
+    position: relative;
+    transition: transform 0.5s ease 0s;
+    z-index: 99;
+	
+	&:after {
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+	    content: "";
+	    height: 0;
+	    opacity: 0;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    transition: opacity 0.5s ease 0s, width 0.1s ease 0.5s, height 0.1s ease 0.5s;
+	    width: 0;
+	}
+	
+	}
+	.wrap.active {
+		left: 0;
+		-webkit-transform: translate3d(12em, 0, 0);
+		transform: translate3d(12em, 0, 0);
+		transition: all 0.5s ease 0s;
+	}
+	a.menu-link {
+	    float: left;
+	    display: block;
+	    padding: 0;
+	}
+	.oc {
+		background: $lightgrey;
+		background: rgba(211,211,211,0.7);
+		color: #fff;
+		padding: 1em;
+		clear: both;
+		overflow: hidden;
+		
+	}
+	.offcanvas .oc {
+		width: 10em;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -12em;
+	}
+	
+	.active .oc {
+		
+		display: block !important;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+		left: 0em !important;
+		
+		&:after {
+			height: 0;
+		    opacity: 0;
+		    transition: opacity 0.5s ease 0s, width 0.1s ease 0.5s, height 0.1s ease 0.5s;
+		    width: 0;
+		}
+	}
+	
+	.lorem {
+		clear: both;
+	}
+
+/*
+nav.oc {
+	display: none;
+}
+*/
+
+nav.active {
+	display: block;
+}
+
+
+/* Hides the overflow so that the scroll bar doesn't come up */
+.offcanvas_over {
+	overflow: hidden;
+}
+
+/* Make sure off canvas is at the top of the z-index pile, although the menu needs to go higher */
+.offcanvas .oc {
+	
+	z-index: 101;
+}

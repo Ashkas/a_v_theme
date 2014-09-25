@@ -1,0 +1,33 @@
+/* This brief css is concerned with dealing with changes in size and weight of typefaces in case the Javascript is not loaded. It will also decrease the 'jump' effect for users who have a slow connection (hence the type-kit loads after the text has appeared)
+
+
+Should not have to add new typefaces, spacing or the like.
+
+It also focuses on the original modifications of the font-size made in the type-sets. By changing these percentages, the other typeface settings throughout the CSS will also change accordingly as they are a percentage off these numbers.
+
+
+ */
+
+
+
+/* Typography presets */
+
+
+ul li {font-size: 110%; font-weight: normal; line-height: 1.5em; }
+
+ol li {font-size: 110%; font-style: normal; font-weight: normal; }
+
+h1 {font-size: 320%; font-weight: lighter;}
+
+h2 {font-size: 180%; font-weight: lighter;}
+
+h3 {font-size: 130%; font-weight: bold;}
+
+h4 {font-weight: bold; font-size: 110%;}
+
+p {font-size: 110%; font-weight: normal}
+
+
+/* Input submit and button presets */
+
+input[type=submit], button {font-size: 110%;}

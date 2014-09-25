@@ -1,0 +1,174 @@
+/* Inspired by - http://typecast.com/blog/a-more-modern-scale-for-web-typography */
+
+body {
+	font-size: 100%;
+	background: $white;
+	font-family: $bodyFont;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6, p, address {
+	font-size-adjust: 0.5;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	vertical-align: baseline;
+	color: $darkgrey;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+	font-family: $titleFont;
+	font-weight: 200;
+	margin: 0px;
+	padding: 0px;
+}
+
+h1.page_title {
+	margin-top: u((20rem/16));
+	font-family: $titleFont;
+	font-weight: 200;
+}
+
+h1.body_font {
+	font-family: $bodyFont;
+}
+
+h2.alt {
+	margin-top: 0px;
+}
+
+p, address {
+	@include font-size(16);
+	margin: u(0px 0px (10rem/16) 0px);
+}
+
+strong {
+	font-weight: 700;
+}
+
+small {
+	@include font-size(14);
+}
+
+small.alt {
+	font-family: $titleFont;
+}
+
+a {
+	@include transition(color, .3s, ease-in); 
+	text-decoration: none;
+	
+	&:link, &:visited {
+		color: $green;
+	}
+	
+	&:hover, &:focus {
+		color: $brown;
+		text-decoration: underline;
+	}
+	
+	&.alt {
+		
+		&:link, &:visited {
+			color: $brown;
+		}
+		
+		&:hover, &:focus {
+			color: $green;
+		}
+	}
+	
+	&.alt_2 {
+		
+		&:link, &:visited {
+			color: $orange;
+		}
+		
+		&:hover, &:focus {
+			color: $green;
+		}
+	}
+}
+
+dl {
+	
+	dt {
+		font-weight: 600;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	dd {
+		margin: 0px 0px 15px;
+		margin: 0px 0px (15rem/16);
+		padding: 0px;
+		
+		&:last-child {
+			margin: 0px;
+		}
+	}
+	
+	margin: u(0px 0px (10rem/16) 0px);
+}
+
+
+ul, ol {
+	
+	padding: u(0px 0px (10rem/16) 0px);
+	margin: 0px;
+	
+	li {
+		list-style-position: inside;
+	}
+}
+
+time {
+	font-family: $titleFont;
+	//line-height: 1.11111;
+	@include font-size(14);
+	//font-style: italic;
+}
+
+h1 {
+	@include font-size(32);
+	/* 2x body copy size = 32px */
+	line-height: 1.25em;
+	/* 45px / 36px */
+}
+
+h2, h1.alt, h1.home_intro {
+	@include font-size(24);
+	/* 1.625x body copy size = 26px */
+	line-height: 1.75em;
+	/* 30px / 26px */
+}
+
+h3, h2.alt, .module h1.alt, h1.alt_2 {
+	@include font-size(20);
+	/* 1.375x body copy size = 22px */
+	line-height: 1.5em;
+	/* 25px / 22px */
+}
+
+h4, h3.alt, .module h2.alt {
+	font-family: $titleFont;
+	@include font-size(18);
+	/* 1.125x body copy size = 18px */
+	line-height: 1.5em;
+}
+
+p.alt {
+	@include font-size(20);
+	@include line-height(28);
+}
+
+blockquote {
+	@include font-size(22);
+	/* 20px / 16px */
+	line-height: 1.25em;
+	/* 25px / 20px */
+	margin-top: u((30rem/16)) !important;
+	margin-bottom: u((30rem/16)) !important;
+	font-style: italic;
+}

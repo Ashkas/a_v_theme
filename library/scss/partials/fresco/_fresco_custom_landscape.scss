@@ -1,0 +1,30 @@
+.fr-has-position .fr-info-inside .fr-caption { margin-right: 0; }
+
+.fr-position { display: none !important; }
+
+/*  Fix the share button issue */
+.fr-no-caption .fr-info-padder { pointer-events: auto; }
+
+/* smaller side buttons */
+.fr-ui-outside .fr-side {
+	width: u((54rem/16));
+	height: u((50rem/16));
+	margin-top: u((-25rem/16));
+}
+.fr-side-button {
+	width: u((40rem/16));
+	height: u((50rem/16));
+	margin: 0 6px;
+	margin-top: -25px;
+}
+
+.fr-info-inside .fr-info-background {
+	opacity: .6 !important;
+	display: block !important;
+	z-index:10000;
+}
+
+.fr-caption {
+	display: block !important;
+	z-index:100000;
+}

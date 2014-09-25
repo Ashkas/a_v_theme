@@ -1,0 +1,29 @@
+h1 {
+    @include font-size(48);
+    /* 3x body copy size = 48px */
+    line-height: 1.5em;
+    /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+}
+
+h2, h1.alt, h1.body_font {
+    font-size: 2.25em;
+    @include font-size(36);
+    /* 2.25x body copy size = 36px */
+    line-height: 1.5em;
+}
+
+h3, h2.alt, .module h1.alt, h1.alt_2 {
+	@include font-size(22);
+	/* 1.75x body copy size = 28px */
+	line-height: 1.55;
+}
+
+h4, h3.alt, .module h2.alt {
+	@include font-size(20);
+	line-height: 1.7;
+	/* (22px / 18px */
+}
+
+blockquote {
+	@include font-size(28);
+}

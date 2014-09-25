@@ -1,0 +1,78 @@
+/* ------------------------------------------------------ Contact Form */
+.wpcf7 {
+	
+	input, textarea {
+		margin-bottom: 5px;
+	}
+	
+	label {
+		font-weight: 500;
+		margin-bottom: 5px;
+		margin-bottom: (5rem/16);
+		display: block;
+		
+		.icon-star {
+			@include font-size(10);
+			position: relative;
+			top: -5px;
+			top: (-5rem/16);
+			
+		}
+	}
+	
+	img.ajax-loader {
+		width: auto;
+	}
+	
+	.wpcf7-checkbox, .wpcf7-radio {
+		display: block;
+		line-height: u((16rem/16));
+		margin-bottom: u((15rem/16));
+		margin-top: u((5rem/16));
+	}
+	
+	.wpcf7-captchac {
+		width: auto;
+		margin-bottom: 5px;
+		margin-bottom: (5rem/16);
+		display: inline-block;
+	}	
+	
+	.wpcf7-captchar {
+		display: inline-block;
+		max-width: 140px;
+		max-width: (140rem/16);
+		margin-bottom: 10px;
+		margin-bottom: (10rem/16);
+		margin-left: 10px;
+		margin-left: (10rem/16);
+		vertical-align: top;
+	}
+	
+	.wpcf7-submit {
+		width: 100%;
+		max-width: none;
+	}
+	
+	.wpcf7-mail-sent-ok, .wpcf7-validation-errors {
+		
+		background: rgb(61,169,94);
+		background: rgba(61,169,94,0.3);
+		padding: 5px;
+		padding: (5rem/16);
+		display: block;
+		font-weight: 500;
+	}
+	
+	.wpcf7-validation-errors {
+		
+		background: rgb(219,0,0);
+		background: rgba(219,0,0,0.3);
+	}
+	
+	.icon-star {
+		
+		color: $green;
+	}
+	
+}

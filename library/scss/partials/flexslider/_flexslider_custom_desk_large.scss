@@ -1,0 +1,15 @@
+/* ------------------------------------------------------ Flexslider */
+
+.flexslider {
+	max-width: u((1440rem/16));
+	
+	.slides {
+		
+		.slide_text {
+			
+			p {
+				@include font-size(22);
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/* Social links, change for lack of background-size */
+a.linkedin-large {
+	background: transparent url(../images/linkedin-large-ie.png) no-repeat;
+}
+
+a.twitter-large {
+	background: transparent url(../images/twitter-large-ie.png) no-repeat;
+}
+
+a.facebook-large {
+	background: transparent url(../images/facebook-large-ie.png) no-repeat;
+}
+
+#footer-extras a:link.linkedin {
+	background: transparent url(../images/linkedin-ie.png) no-repeat;
+}
+
+/* Font sizing of site h1 needs to be readjusted for IE8 */
+
+header h1 {font-size: 160%; font-weight: 500;}
+
+/* Add the alternate padding for the secondary widget on the homepage just for IE8 as it doesn't understand :nth-child(even) */
+
+body.home #sidebar-secondary > *:first-child + * {padding: 0px 24px;}

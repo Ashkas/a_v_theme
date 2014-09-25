@@ -1,0 +1,261 @@
+/* ------------------------------------------------------  Calculations 
+
+100%*(20/940); = Percentage based within context
+(10em/16) = calculate ems
+
+*/
+
+// config
+$px-only:false;  /* Refer - http://davidwalsh.name/rem-px-browser-function-sass */
+
+$altFont: "ff-ernestine-web-pro", Helvetica, Arial, sans-serif;
+$titleFont:"brandon-grotesque", Helvetica, Arial, sans-serif;
+$bodyFont: "ff-ernestine-web-pro", Georgia, serif;
+
+
+/* ------------------------------------------------------ mixins */
+
+@import "modules/_ie_px_fallback.scss";
+
+@import "modules/mixins.scss";
+
+@import "modules/custom_mixins.scss";
+
+@import "modules/css3-mixins.scss";
+
+/* ------------------------------------------------------ Colours */
+
+@import "partials/colours.scss";
+
+/* ------------------------------------------------------ Normalise */
+
+@import "partials/normalize.scss";
+	
+/* ------------------------------------------------------ Semantic Divs - Reusables */
+
+@import "partials/helpers/helpers.scss";
+
+/* widescreen mobile - 480 */
+@media (min-width: 30em) {
+	
+	@import "partials/helpers/helpers_mob_landscape.scss";
+}
+
+/* TABLET - 760 - 6 columns */
+@media (min-width: 47.5em) {
+	
+	@import "partials/helpers/helpers_tab.scss";
+}
+
+/* DESKTOP B - 980 - 8 Columns */
+@media (min-width: 61.25em) {
+	
+	@import "partials/helpers/helpers_desk.scss";
+}
+
+/* DESKTOP A - 1180 - 12 Columns */
+@media (min-width: 73.75em) {
+	
+	@import "partials/helpers/helpers_desk_large.scss";
+}
+
+/* ------------------------------------------------------ Fonts */
+
+@import "partials/fonts.scss";
+
+/* ------------------------------------------------------ Flexslider */
+
+@import "partials/flexslider/flexslider_plugin.scss";
+@import "partials/flexslider/flexslider_custom.scss";
+
+/* TABLET - 760 - 6 columns */
+@media (min-width: 47.5em) {
+	
+	@import "partials/flexslider/flexslider_custom_tab.scss";
+}
+
+/* DESKTOP B - 980 - 8 Columns */
+@media (min-width: 61.25em) {
+	
+	@import "partials/flexslider/flexslider_custom_desk.scss";
+}
+
+/* DESKTOP A - 1180 - 12 Columns */
+@media (min-width: 73.75em) {
+	
+	@import "partials/flexslider/flexslider_custom_desk_large.scss";
+}
+
+/* ------------------------------------------------------ Fresco */
+
+@import "partials/fresco/fresco_plugin.scss";
+
+/* hide the position on small screens */
+@media all and (max-width: 35.5em) and (max-height: 20em) {
+	
+	@import "partials/fresco/fresco_custom_landscape.scss";
+}
+
+@media all and (max-width: 20em) and (max-height: 35.5em) {
+
+	@import "partials/fresco/fresco_custom_portrait.scss";
+}
+
+@import "partials/fresco/fresco_custom.scss";
+
+/* ------------------------------------------------------ Typography */
+
+@import "partials/typography/typography.scss";
+
+/* 760 */
+@media (min-width: 47.5em) {
+	
+	@import "partials/typography/typography_tab.scss";
+}
+
+/* 980 */
+@media (min-width: 61.25em) {
+	
+	@import "partials/typography/typography_desk.scss";
+}
+
+/* ------------------------------------------------------ Offcanvas */
+
+@import "partials/offcanvas/offcanvas.scss";
+
+/* 980 */
+@media (min-width: 61.25em) {
+	
+	@import "partials/offcanvas/offcanvas_desk.scss";
+}
+
+/* ------------------------------------------------------ Inputs */
+
+@import "partials/inputs.scss";
+
+/* ------------------------------------------------------ Images */
+
+@import "partials/images.scss";
+
+/* ------------------------------------------------------ Grid */
+
+@import "partials/grid/_grid_mob.scss";
+
+/* TABLET - 760 - 6 columns */
+@media (min-width: 47.5em) {
+	
+	@import "partials/grid/_grid_tab.scss";
+}
+
+/* DESKTOP B - 980 - 8 Columns */
+@media (min-width: 61.25em) {
+	
+	@import "partials/grid/_grid_desk.scss";
+}
+
+/* DESKTOP A - 1180 - 12 Columns */
+@media (min-width: 73.75em) {
+	
+	@import "partials/grid/grid_desk_large.scss";
+}
+
+/* ------------------------------------------------------ Content */
+
+@import "partials/content/content.scss";
+
+/* 760 */
+@media (min-width: 47.5em) {
+	
+	@import "partials/content/content_tab.scss";
+}
+
+/* 980 */
+@media (min-width: 61.25em) {
+	
+	@import "partials/content/content_desk.scss";
+}
+
+/* ------------------------------------------------------ Search */
+
+@import "partials/search/search.scss";
+
+/* widscreen Mobile - 480  */
+@media (min-width: 30em) {
+	
+	@import "partials/search/search_mob_landscape.scss";
+}
+
+/* DESKTOP B - 980 - 8 Columns */
+@media (min-width: 61.25em) {
+	
+	@import "partials/search/search_desk.scss";
+}
+
+/* ------------------------------------------------------ Buttons */
+
+@import "partials/buttons/buttons.scss";
+
+/* TABLET - 760 - 6 columns */
+@media (min-width: 47.5em) {
+	
+	@import "partials/buttons/buttons_tab.scss";
+}
+
+/* ------------------------------------------------------ add.This */
+
+@import "partials/addthis.scss";
+
+/* ------------------------------------------------------ Pagination */
+
+@import "partials/pagination/pagination.scss";
+
+/* TABLET - 760 - 6 columns */
+@media (min-width: 47.5em) {
+	@import "partials/pagination/pagination_tab.scss";
+}
+
+/* ------------------------------------------------------ Contact Form */
+
+@import "partials/contact_form.scss";
+
+/* ------------------------------------------------------ Large screen menu */
+
+/* DESKTOP B - 980 - 8 Columns */
+@media (min-width: 61.25em) {
+	
+	@import "partials/large_screen_menu/large_screen_menu_desk.scss";
+}
+
+/* DESKTOP A - 1180 - 12 Columns */
+@media (min-width: 73.75em) {
+
+	@import "partials/large_screen_menu/large_screen_menu_desk_large.scss";
+}
+
+/* ------------------------------------------------------ Styles */
+
+@import "partials/styles/styles.scss";
+
+/* widscreen Mobile - 480  */
+@media (min-width: 30em) {
+
+	@import "partials/styles/styles_mob_landscape.scss";
+}
+
+/* TABLET - 760 - 6 columns */
+@media (min-width: 47.5em) {
+
+	@import "partials/styles/styles_tab.scss";
+}
+
+/* DESKTOP B - 980 - 8 Columns */
+@media (min-width: 61.25em) {
+	
+	@import "partials/styles/styles_desk.scss";
+}
+
+/* DESKTOP A - 1180 - 12 Columns */
+@media (min-width: 73.75em) {
+	
+	@import "partials/styles/styles_desk_large.scss";
+}

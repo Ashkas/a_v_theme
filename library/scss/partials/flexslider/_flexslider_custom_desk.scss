@@ -1,0 +1,15 @@
+/* ------------------------------------------------------ Flexslider */
+
+.loading {
+	min-height: u(400rem/16);
+}
+
+.flexslider {
+	
+	.slides {
+		
+		.slide_text_box {
+			max-width: 100%*(700/980);/* Six columns */
+		}
+	}
+}

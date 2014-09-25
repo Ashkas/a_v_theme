@@ -1,0 +1,67 @@
+/* Social links, change for lack of background-size */
+a.linkedin-large {
+	background: transparent url(../images/linkedin-large-ie.png) no-repeat;
+	display: block;
+	float: left;
+}
+
+a.twitter-large {
+	background: transparent url(../images/twitter-large-ie.png) no-repeat;
+	display: block;
+	float: left;
+}
+
+a.facebook-large {
+	background: transparent url(../images/facebook-large-ie.png) no-repeat;
+	display: block;
+	float: left;
+}
+
+#footer-extras a:link.linkedin {
+	background: transparent url(../images/linkedin-ie.png) no-repeat;
+	display: block;
+	float: left;
+}
+
+
+/* Fixes the layout of the footer columns */
+
+li#modular_a-nav-menu-3, li#modular_a-nav-menu-4, li#modular_a-nav-menu-5, li#modular_a-nav-menu-6 {
+    display: inline;}
+  
+  
+/* Fixes the drop-down menu box going behind the title layoutbox */
+
+  .page-title  {z-index: 1; position: relative;}
+  
+	nav .menu ul li  ul.sub-menu {z-index: 100; position: absolute;}
+	
+	nav .menu ul li  ul.sub-menu li {z-index: 109; position: relative;}
+  
+
+/* Font sizing of site h1 needs to be readjusted for IE7 */
+
+header h1 {font-size: 200%; font-weight: 500;}
+
+/* Fixes the header menu - the font is too large for IE7 */
+
+nav .menu ul li {font-size: 140%;}
+
+/* Add the alternate padding for the secondary widget on the homepage just for IE7 as it doesn't understand :nth-child(even) */
+
+body.home #sidebar-secondary > *:first-child + * {padding: 0px 24px;}
+
+/* Add the alternate boders for the posts on the homepage just for IE7 as it doesn't understand :nth-child(even) */
+
+body.home #layout-block-five-cols + * {border-bottom: 1px solid #F6F6F5; border-top: 1px solid #F6F6F5;}
+
+/* Get rid of background image on admin bar */
+
+#wpadminbar .quicklinks .menupop ul li {list-style-image: none;}
+
+/* IE7 has a different interpretation of the em distance here */
+.widget .search-form input {float:left; display: inline}
+
+/* To stop the featured image in posts appearing outside the page container */
+
+.featured-post-variation {margin-left: -73.8em;} 

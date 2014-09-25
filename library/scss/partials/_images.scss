@@ -1,0 +1,35 @@
+/* ------------------------------------------------------ Responsive Images */
+
+img {
+	width: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic; 
+}
+	
+img.size-thumanil {
+	max-width: 100%;
+	width: auto;
+	height: 100%;
+}
+
+img.size-medium, .size-medium-16x9 {
+	width: 100%;
+	max-width: u((380rem/16));
+	height: 100%;
+}
+
+img.size-large {
+	width: 100%;
+	max-width: u((820rem/16));
+	height: 100%;
+}
+
+figure {
+	margin: 0px;
+}
+
+figcaption {
+	font-family: $titleFont;
+	@include font-size(14);
+	@include line-height(16);
+}

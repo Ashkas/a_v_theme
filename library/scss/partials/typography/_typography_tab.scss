@@ -1,0 +1,37 @@
+p.alt {
+	@include font-size(24);
+	@include line-height(36);
+	margin-bottom: u((20rem/16));
+}
+
+p, li {
+	@include font-size(18);
+	@include line-height(28);
+}
+
+h1 {
+	@include font-size(40);
+	/* 2.5x body copy size = 40px */
+	line-height: 1.5em;
+}
+
+h2, h1.alt, h1.body_font {
+    @include font-size(32);
+    /* 2x body copy size = 32px */
+    line-height: 1.4em;
+}
+
+h3, h2.alt, .module h1.alt, h1.alt_2 {
+    @include font-size(20);
+    /* 1.5x body copy size = 24px */
+    line-height: 1.5em;
+}
+
+blockquote {
+    @include font-size(24);
+    /* 24px / 16px = */
+    line-height: 1.45833333;
+    /* 35px / 24px */
+	margin-top: u((40rem/16)) !important;
+	margin-bottom: u((40rem/16)) !important;
+}

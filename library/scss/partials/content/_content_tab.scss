@@ -1,0 +1,14 @@
+.inline_meta, .inline_meta_2  {
+	float: left;
+	display: block;
+	//margin-left: u((-40rem/16));
+	margin-right: u((20rem/16));
+}
+
+.inline_meta_right {
+	
+	float: right;
+	display: block;
+	//margin-right: u((-40rem/16));
+	margin-left: u((20rem/16));
+}

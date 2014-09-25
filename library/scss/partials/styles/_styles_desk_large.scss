@@ -1,0 +1,56 @@
+/* ------------------------------------------------------ Header */
+
+.site_header {
+	
+	img {
+		
+		max-width: u((260rem/16));
+	}
+	
+	.desk_a_8 {
+		width: 100%*(780/1180);/* eight columns */
+	}
+	
+	.desk_a_4 {
+		width: 100%*(380/1180); /* Four columns */
+	}
+	
+	.header_search {
+		height: u((73rem/16));
+		
+		.icon-search {	
+			height: u((73rem/16));
+			@include line-height(73);
+		}
+	}
+}
+
+/* ------------------------------------------------------ Structure */
+.main, .footer_content, .header_content, .header_top_content {
+	max-width: u((1240rem/16));
+	margin: 0px auto;
+}
+
+.main_content {
+	//padding: 0px;
+}
+
+/* ------------------------------------------------------ Content Styles - includes images */
+
+.content_styles {
+	
+	figure.medium, figure.size-medium-16x9 {
+		
+		max-width: 100%*(480/820);
+		//margin-left: 100%*(-160/820);
+		padding-right: 100%*(20/820);
+		
+	}
+	
+	figure.medium.align_right, figure.medium-16x9.align_right {
+		margin-left: 0px;
+		//margin-right: 100%*(-160/820);
+		padding-right: 0px;
+		padding-left: 100%*(20/820);
+	}
+}

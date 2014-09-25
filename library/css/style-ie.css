@@ -1,0 +1,4144 @@
+/* Refer - http://davidwalsh.name/rem-px-browser-function-sass */
+/* ------------------------------------------------------ mixins */
+/* 1 */
+/* 3 */
+/* https://github.com/web-design-weekly/sass-mixins */
+/* Responsive Breakpoints
+   ========================================================================== */
+/* Flexbox from - https://github.com/mastastealth/sass-flex-mixin/blob/master/flex.scss */
+/* ------------------------------------------------------ Colours */
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+  Mixins available:
+    -   background-gradient     - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-size         - arguments: Width: 100%, Height: 100%
+    -   border-radius           - arguments: Radius: 5px
+    -   border-radius-separate  - arguments: Top Left: 5px, Top Left: 5px, Bottom Left: 5px, Bottom Right: 5px
+    -   box                     - arguments: Orientation: horizontal, Pack: center, Align: center
+    -   box-rgba                - arguments: R: 60, G: 3, B: 12, Opacity: 0.23, Color: #3C3C3C
+    -   box-shadow              - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   box-sizing              - arguments: Type: border-box
+    -   columns                 - arguments: Count: 3, Gap: 10
+    -   double-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Radius: 0
+    -   flex                    - arguments: Value: 1
+    -   flip                    - arguments: ScaleX: -1
+    -   font-face               - arguments: Font Family: myFont, Eot File Src: myFont.eot, Woff File Src: myFont.woff, Ttf File Src: myFont.ttf
+    -   opacity                 - arguments: Opacity: 0.5
+    -   outline radius          - arguments: Radius: 5px
+    -   resize                  - arguments: Direction: both
+    -   rotate                  - arguments: Degree: 0, M11: 0, M12: 0, M21: 0, M22: 0
+    CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+    -   text-shadow             - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   transform               - arguments: Parameters: null
+    -   transition              - arguments: What: all, Length: 1s, Easing: ease-in-out
+    -   triple-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Color Three: #000000, Radius: 0
+
+------------------------------------------------------------- */
+/* BACKGROUND GRADIENT */
+/* ------------------------------------------------------ Normalise */
+/* Colours */
+/* ------------------------------------------------------ Semantic Divs - Reusables */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* ------------------------------------------------------ Fonts */
+@import "partials/semantic_helpers.scss";
+/* ------------------------------------------------------ Flexslider */
+@import "partials/flexslider_plugin.scss";
+/* ------------------------------------------------------ Typography */
+@import "partials/flexslider_custom.scss";
+/* Inspired by - http://typecast.com/blog/a-more-modern-scale-for-web-typography */
+/* ------------------------------------------------------ Offcanvas */
+/* ------------------------------------------------------ Grid */
+/* ------------------------------------------------------ Layout Mobile */
+/* ------------------------------------------------------ Layout Tablet - 760 - 6 columns */
+/* ------------------------------------------------------ Layout Desktop B - 980 - 8 columns */
+/*
+[class*="tab_"] {
+	width: auto;
+	float: none;
+	margin-right: auto;
+}
+*/
+/* ------------------------------------------------------ Styles */
+/* ------------------------------------------------------ Layout Desktop A - 1180 - 12 columns */
+/* ------------------------------------------------------ Site Frame */
+/* ------------------------------------------------------ Header */
+/* ------------------------------------------------------ Site structure */
+/* reset padding_block */
+/* ------------------------------------------------------ header */
+/* ------------------------------------------------------ Semantic Helpers */
+/* ------------------------------------------------------ Header */
+html {
+  /* 1 */
+  font-family: sans-serif;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /**
+ * Remove default margin.
+ */
+}
+body {
+  margin: 0;
+  /* HTML5 display definitions
+   ========================================================================== */
+  /**
+ * Correct `block` display not defined in IE 8/9.
+ */
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+  /**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+}
+audio, canvas, progress, video {
+  /* 1 */
+  display: inline-block;
+  /* 2 */
+  vertical-align: baseline;
+  /**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+  /**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+}
+[hidden], template {
+  display: none;
+  /* Links
+   ========================================================================== */
+  /**
+ * Remove the gray background color from active links in IE 10.
+ */
+}
+a {
+  background: transparent;
+  /**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+}
+a:active, a:hover {
+  outline: 0;
+  /* Text-level semantics
+   ========================================================================== */
+  /**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+  /**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+}
+b, strong {
+  font-weight: bold;
+  /**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+}
+dfn {
+  font-style: italic;
+  /**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  /**
+ * Address styling not present in IE 8/9.
+ */
+}
+mark {
+  background: #ff0;
+  color: #000;
+  /**
+ * Address inconsistent and variable font size in all browsers.
+ */
+}
+small {
+  font-size: 80%;
+  /**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+  /* Embedded content
+   ========================================================================== */
+  /**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+}
+img {
+  border: 0;
+  /**
+ * Correct overflow displayed oddly in IE 9.
+ */
+}
+svg:not(:root) {
+  overflow: hidden;
+  /* Grouping content
+   ========================================================================== */
+  /**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+}
+figure {
+  margin: 1em 40px;
+  /**
+ * Address differences between Firefox and other browsers.
+ */
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+  /**
+ * Contain overflow in all browsers.
+ */
+}
+pre {
+  overflow: auto;
+  /**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+}
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  /* Forms
+   ========================================================================== */
+  /**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+  /**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+}
+button, input, optgroup, select, textarea {
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  font: inherit;
+  /* 3 */
+  margin: 0;
+  /**
+ * Address `overflow` set to `hidden` in IE 8/9/10.
+ */
+}
+button {
+  overflow: visible;
+  /**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8+, and Opera
+ * Correct `select` style inheritance in Firefox.
+ */
+}
+button, select {
+  text-transform: none;
+  /**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  /* 2 */
+  -webkit-appearance: button;
+  /* 3 */
+  cursor: pointer;
+  /**
+ * Re-set default cursor for disabled elements.
+ */
+}
+button[disabled], html input[disabled] {
+  cursor: default;
+  /**
+ * Remove inner padding and border in Firefox 4+.
+ */
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  /**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+}
+input {
+  line-height: normal;
+  /**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+}
+input[type="checkbox"], input[type="radio"] {
+  /* 1 */
+  box-sizing: border-box;
+  /* 2 */
+  padding: 0;
+  /**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+}
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+  /**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+}
+input[type="search"] {
+  /* 1 */
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  /* 2 */
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+}
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /**
+ * Define consistent border, margin, and padding.
+ */
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+  /**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+}
+legend {
+  /* 1 */
+  border: 0;
+  /* 2 */
+  padding: 0;
+  /**
+ * Remove default vertical scrollbar in IE 8/9.
+ */
+}
+textarea {
+  overflow: auto;
+  /**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+}
+optgroup {
+  font-weight: bold;
+  /* Tables
+   ========================================================================== */
+  /**
+ * Remove most spacing between table cells.
+ */
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td, th {
+  padding: 0;
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?-q5pxwa');
+  src: url('../fonts/icomoon.eot?#iefix-q5pxwa') format('embedded-opentype'), url('../fonts/icomoon.woff?-q5pxwa') format('woff'), url('../fonts/icomoon.ttf?-q5pxwa') format('truetype'), url('../fonts/icomoon.svg?-q5pxwa#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"], a.flex-prev, a.flex-next {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-phone:before {
+  content: "\e600";
+}
+.icon-directions:before {
+  content: "\e601";
+}
+.icon-mail:before {
+  content: "\e602";
+}
+.icon-pencil:before {
+  content: "\e603";
+}
+.icon-paperclip:before {
+  content: "\e604";
+}
+.icon-export:before {
+  content: "\e605";
+}
+.icon-location:before {
+  content: "\e606";
+}
+.icon-star:before {
+  content: "\e607";
+}
+.icon-comment:before {
+  content: "\e608";
+}
+.icon-house:before {
+  content: "\e609";
+}
+.icon-search:before {
+  content: "\e619";
+}
+.icon-camera:before {
+  content: "\e61a";
+}
+.icon-bolt:before {
+  content: "\e60a";
+}
+.icon-network:before {
+  content: "\e60b";
+}
+.icon-rss:before {
+  content: "\e60c";
+}
+.icon-checkmark:before {
+  content: "\e60d";
+}
+.icon-info:before {
+  content: "\e60e";
+}
+.icon-help:before {
+  content: "\e60f";
+}
+.icon-list:before {
+  content: "\e610";
+}
+.icon-pictures:before {
+  content: "\e611";
+}
+.icon-video:before {
+  content: "\e612";
+}
+.icon-install:before {
+  content: "\e613";
+}
+.icon-bookmark:before {
+  content: "\e614";
+}
+.icon-arrow-down:before {
+  content: "\e61b";
+}
+.icon-arrow-left:before, a.flex-prev:before {
+  content: "\e615";
+}
+.icon-arrow-right:before, a.flex-next:before {
+  content: "\e616";
+}
+.icon-twitter:before {
+  content: "\e617";
+}
+.icon-facebook:before {
+  content: "\e618";
+}
+body {
+  font-size: 100%;
+  background: #f9f9f9;
+  font-family: "adobe-text-pro", Georgia, serif;
+}
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6, p, address {
+  font-size-adjust: 0.5;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+  vertical-align: baseline;
+  color: #333;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 {
+  font-family: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  margin: 0px;
+  padding: 0px;
+}
+h1.page_title {
+  margin-top: 20px ;
+  font-family: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+@else {
+  /* 10 */
+}
+h1.body_font {
+  font-family: "adobe-text-pro", Georgia, serif;
+}
+h2.alt {
+  margin-top: 0px;
+}
+p, address {
+  font-size: 16px;
+  font-size: 1rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  margin: 0px 0px 10px 0px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+strong {
+  font-weight: 700;
+}
+small {
+  font-size: 14px;
+  font-size: 0.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+}
+small.alt {
+  font-family: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+}
+a {
+  -moz-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-in;
+  -ms-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+  /* TRIPLE BORDERS */
+  text-decoration: none;
+}
+a:link, a:visited {
+  color: #3f8f21;
+}
+a:hover, a:focus {
+  color: #521d18;
+  text-decoration: underline;
+}
+a.alt:link, a.alt:visited {
+  color: #521d18;
+}
+a.alt:hover, a.alt:focus {
+  color: #3f8f21;
+}
+a.alt_2:link, a.alt_2:visited {
+  color: #f16347;
+}
+a.alt_2:hover, a.alt_2:focus {
+  color: #3f8f21;
+}
+dl {
+  margin: 0px 0px 10px 0px ;
+}
+dl dt {
+  font-weight: 600;
+  margin: 0px;
+  padding: 0px;
+}
+dl dd {
+  margin: 0px 0px 15px;
+  margin: 0px 0px 0.9375rem;
+  padding: 0px;
+}
+dl dd:last-child {
+  margin: 0px;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+ul, ol {
+  padding: 0px 0px 10px 0px ;
+  margin: 0px;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+ul li, ol li {
+  list-style-position: inside;
+}
+time {
+  font-family: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+}
+#page {
+  /* equivalent to 16px */
+  font-size: 14px;
+  font-size: 0.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* equivalent to 20px */
+  line-height: 22px;
+  line-height: 1.375rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+}
+.menu_font {
+  font-family: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+h1 {
+  /* 2x body copy size = 32px */
+  font-size: 32px;
+  font-size: 2rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* 45px / 36px */
+  line-height: 1.25em;
+}
+h2, h1.alt, h1.home_intro {
+  /* 1.625x body copy size = 26px */
+  font-size: 24px;
+  font-size: 1.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* 30px / 26px */
+  line-height: 1.75em;
+}
+h3, h2.alt, .module h1.alt, h1.alt_2 {
+  /* 1.375x body copy size = 22px */
+  font-size: 20px;
+  font-size: 1.25rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* 25px / 22px */
+  line-height: 1.5em;
+}
+h4, h3.alt, .module h2.alt {
+  font-family: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+  /* 1.125x body copy size = 18px */
+  font-size: 18px;
+  font-size: 1.125rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 1.5em;
+}
+p.alt {
+  font-size: 20px;
+  font-size: 1.25rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 28px;
+  line-height: 1.75rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+}
+blockquote {
+  /* 20px / 16px */
+  font-size: 22px;
+  font-size: 1.375rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* 25px / 20px */
+  line-height: 1.25em;
+  margin-top: 30px  !important;
+  margin-bottom: 30px  !important;
+  font-style: italic;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+#page {
+  /* equivalent to 16px */
+  /*  @include line-height(26); */
+  font-size: 16px;
+  font-size: 1rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* equivalent to 22px */
+  line-height: 1.75em;
+}
+p.alt {
+  font-size: 24px;
+  font-size: 1.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 36px;
+  line-height: 2.25rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  margin-bottom: 20px ;
+}
+@else {
+  /* 10 */
+}
+p, li {
+  font-size: 18px;
+  font-size: 1.125rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 28px;
+  line-height: 1.75rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+}
+h1 {
+  /* 2.5x body copy size = 40px */
+  font-size: 40px;
+  font-size: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 1.5em;
+}
+h2, h1.alt, h1.body_font {
+  /* 2x body copy size = 32px */
+  font-size: 32px;
+  font-size: 2rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 1.4em;
+}
+h3, h2.alt, .module h1.alt, h1.alt_2 {
+  /* 1.5x body copy size = 24px */
+  font-size: 20px;
+  font-size: 1.25rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 1.5em;
+}
+blockquote {
+  /* 24px / 16px = */
+  font-size: 24px;
+  font-size: 1.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* 35px / 24px */
+  line-height: 1.45833;
+  margin-top: 40px  !important;
+  margin-bottom: 40px  !important;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+#page {
+  /* equivalent to 16px */
+  /*  @include line-height(26); */
+  font-size: 17px;
+  font-size: 1.0625rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* equivalent to 24px */
+  line-height: 1.75em;
+}
+h1 {
+  /* 3x body copy size = 48px */
+  font-size: 48px;
+  font-size: 3rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+  line-height: 1.5em;
+}
+h2, h1.alt, h1.body_font {
+  font-size: 2.25em;
+  /* 2.25x body copy size = 36px */
+  font-size: 36px;
+  font-size: 2.25rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 1.5em;
+}
+h3, h2.alt, .module h1.alt, h1.alt_2 {
+  /* 1.75x body copy size = 28px */
+  font-size: 22px;
+  font-size: 1.375rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 1.55;
+}
+h4, h3.alt, .module h2.alt {
+  font-size: 20px;
+  font-size: 1.25rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* (22px / 18px */
+  line-height: 1.7;
+}
+blockquote {
+  font-size: 28px;
+  font-size: 1.75rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+}
+#nav_anchor_container {
+  background: none;
+}
+#nav_anchor_container .nav_anchors {
+  width: 100px ;
+  margin: 0px;
+  padding: 0;
+  height: 40px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+#nav_anchor_container .nav_anchors li {
+  text-align: center;
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  line-height: 40px;
+  line-height: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  font-size: 16px;
+  font-size: 1rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  display: inline;
+  list-style-image: none;
+  background: none;
+  font-weight: bold;
+}
+#nav_anchor_container .nav_anchors li:before {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "";
+  font-size: 12px;
+  font-size: 0.75rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  margin-left: 0px;
+  padding-right: 0px;
+}
+#nav_anchor_container .nav_anchors li #sidebarButton.active {
+  color: #3f8f21;
+  text-shadow: none;
+}
+#nav_anchor_container .nav_anchors li.nav_search {
+  float: right;
+  margin: 0.7em 0.45em 0em 0em;
+  padding-left: 0px;
+  /* Needs width fix, too wide for smartphone */
+  width: 50%;
+}
+#nav_anchor_container .nav_anchors li.nav_search label {
+  display: none;
+}
+#nav_anchor_container .nav_anchors li.nav_search input[type="submit"] {
+  display: none;
+}
+#nav_anchor_container .nav_anchors li a {
+  color: black;
+  text-shadow: 1px 1px 0px #ccc;
+  text-align: center;
+}
+#nav_anchor_container .nav_anchors li a .icon-list {
+  font-size: 24px;
+  font-size: 1.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 40px;
+  line-height: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  margin-right: 5px ;
+  float: left;
+}
+@else {
+  /* 10 */
+}
+#nav_anchor_container .nav_anchors li a:focus, #nav_anchor_container .nav_anchors li a:hover {
+  color: #3f8f21;
+  background: none;
+}
+.no-js .oc {
+  left: 0px !important;
+  display: none !important;
+  position: relative !important;
+  margin-bottom: 1em;
+}
+.menu-link ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  position: relative;
+  z-index: 202;
+  /* Manually set up highlight for blog items */
+}
+.menu-link ul li {
+  display: block;
+  font-family: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+}
+.menu-link ul li a {
+  text-transform: uppercase;
+  color: #333;
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 24px;
+  line-height: 1.5rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  color: #333;
+  padding-left: 0;
+  /* border-bottom: 1px solid #ddd; */
+  margin-top: 10px ;
+}
+@else {
+  /* 10 */
+}
+.menu-link ul li a:hover {
+  border-left-color: #3f8f21;
+}
+.menu-link ul li.current-menu-item > a {
+  border-left: 4px solid #3f8f21;
+  text-indent: 5px;
+}
+.menu-link ul li.current-menu-parent > a {
+  border-left: 4px solid #3f8f21;
+  text-indent: 5px;
+}
+.menu-link ul li.current-menu-parent a, .menu-link ul li.current-menu-ancestor a {
+  border-left: 4px solid #3f8f21;
+  text-indent: 5px;
+}
+.menu-link ul li ul.sub-menu li {
+  font-size: 14px;
+  font-size: 0.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  text-indent: 10px ;
+  border-bottom: 1px solid white;
+}
+@else {
+  /* 10 */
+}
+.menu-link ul li ul.sub-menu li a {
+  font-weight: 200;
+  margin-top: 0;
+  border-left: 4px solid #f9f9f9;
+  color: #333;
+}
+.menu-link ul li ul.sub-menu li a:hover {
+  /* border-left: 3px solid $green; */
+  color: #f9f9f9;
+  border-left-color: #f9f9f9;
+}
+.menu-link ul li ul.sub-menu li.current-menu-item > a, .menu-link ul li ul.sub-menu li.current-menu-ancestor > a {
+  color: #f9f9f9;
+  border-left-color: #3f8f21;
+}
+.menu-link ul li ul.sub-menu li:first-child {
+  /* background: red; */
+  border-top: 1px solid white;
+}
+.single-post {
+  /*
+.menu-link ul ~ li {
+	background: red;
+}
+*/
+}
+.single-post .menu-link ul li.menu-item-513 a {
+  border-left: 4px solid #3f8f21;
+  text-indent: 5px;
+}
+.wrap {
+  height: 100%;
+  left: 0;
+  position: relative;
+  transition: transform 0.5s ease 0s;
+  z-index: 99;
+}
+.wrap:after {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.2);
+  content: "";
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.5s ease 0s, width 0.1s ease 0.5s, height 0.1s ease 0.5s;
+  width: 0;
+}
+.wrap.active {
+  left: 0;
+  -webkit-transform: translate3d(12em, 0, 0);
+  transform: translate3d(12em, 0, 0);
+  transition: all 0.5s ease 0s;
+}
+a.menu-link {
+  float: left;
+  display: block;
+  padding: 0;
+}
+.oc {
+  background: #ccc;
+  background: rgba(211, 211, 211, 0.7);
+  color: #fff;
+  padding: 1em;
+  clear: both;
+  overflow: hidden;
+}
+.offcanvas .oc {
+  width: 10em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -12em;
+}
+.active .oc {
+  display: block !important;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  left: 0em !important;
+}
+.active .oc:after {
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease 0s, width 0.1s ease 0.5s, height 0.1s ease 0.5s;
+  width: 0;
+}
+.lorem {
+  clear: both;
+  /*
+nav.oc {
+	display: none;
+}
+*/
+}
+nav.active {
+  display: block;
+  /* Hides the overflow so that the scroll bar doesn't come up */
+}
+.offcanvas_over {
+  overflow: hidden;
+  /* Make sure off canvas is at the top of the z-index pile, although the menu needs to go higher */
+}
+.offcanvas .oc {
+  z-index: 101;
+}
+a.menu-link {
+  display: none;
+}
+.offcanvas .oc {
+  position: static;
+  display: none;
+  visibility: hidden;
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+.wrap.active {
+  left: 0;
+}
+.lorem {
+  clear: none;
+  margin-left: 30%;
+}
+.mob_1 {
+  /* one columns */
+  width: 20.3125%;
+  float: left;
+}
+.mob_2 {
+  /* Two columns */
+  width: 46.875%;
+  float: left;
+}
+.mob_3 {
+  /* Three columns */
+  width: 73.4375%;
+  float: left;
+}
+.mob_4 {
+  /* Four columns */
+  width: 100%;
+  float: left;
+}
+.col_gutter, .mob_col_gutter {
+  margin-right: 6.25%;
+}
+.responsive_grid_gutter {
+  margin-right: 6.25%;
+  /* ------------------------------------------------------ Layout grid - used in columns */
+}
+.responsive_grid_gutter:nth-child(2n) {
+  margin-right: 0px;
+}
+.mobile_grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.mobile_grid .mobile_grid_item {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* FLIP */
+}
+.mobile_grid .mobile_grid_item:nth-child(2n+2) {
+  margin-left: 6.25%;
+}
+.grid .grid_item {
+  margin-bottom: 5px ;
+}
+@else {
+  /* 10 */
+}
+.tab_1 {
+  /* one columns */
+  width: 14.47368%;
+  float: left;
+}
+.tab_2 {
+  /* Two columns */
+  width: 31.57895%;
+  float: left;
+}
+.tab_3 {
+  /* Three columns */
+  width: 48.68421%;
+  /* Three columns */
+  max-width: 48.68421%;
+  float: left;
+}
+.tab_3_alt {
+  /* Three columns */
+  width: 47.36842%;
+  padding-right: 2.63158%;
+  margin-right: 2.63158%;
+  float: left;
+}
+.tab_3_alt:nth-child(2n+2) {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.tab_4 {
+  /* Four columns */
+  width: 65.78947%;
+  /* Four columns */
+  max-width: 65.78947%;
+  float: left;
+}
+.tab_5 {
+  /* Five columns */
+  width: 82.89474%;
+  /* Five columns */
+  max-width: 82.89474%;
+  float: left;
+}
+.tab_6 {
+  /* Six columns */
+  width: 100%;
+  float: left;
+}
+.mob_col_gutter {
+  margin-right: 0px;
+}
+.col_gutter, .large_col_gutter, .tab_col_gutter {
+  margin-right: 2.63158%;
+}
+.responsive_grid_gutter {
+  margin-right: 2.63158%;
+  /* ------------------------------------------------------ Layout grid - used in columns */
+}
+.responsive_grid_gutter:nth-child(2n) {
+  margin-right: 2.63158%;
+}
+.responsive_grid_gutter:nth-child(3n) {
+  margin-right: 0px;
+}
+.grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /* ------------------------------------------------------ Layout grid for articles - used in columns */
+}
+.grid .grid_item {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* FLIP */
+  margin-bottom: 0px;
+}
+.grid .grid_item:nth-of-type(2), .grid .grid_item:nth-of-type(3), .grid .grid_item:nth-of-type(4) {
+  margin-left: 2.63158%;
+}
+.grid .grid_item_alt {
+  width: 33.33%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* FLIP */
+}
+.grid .grid_item_alt:nth-of-type(2), .grid .grid_item_alt:nth-of-type(3), .grid .grid_item_alt:nth-of-type(4) {
+  width: 66.66%;
+  margin-left: 2.63158%;
+}
+.grid_articles {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.grid_articles .grid_item {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* FLIP */
+  margin-left: 2.63158%;
+}
+.grid_articles .grid_item:nth-child(3n+1) {
+  margin-left: 0px;
+}
+.desk_b_1 {
+  /* one columns */
+  width: 10.71429%;
+  float: left;
+}
+.desk_b_2 {
+  /* Two columns */
+  width: 23.46939%;
+  float: left;
+}
+.desk_b_3 {
+  /* Three columns */
+  width: 36.22449%;
+  float: left;
+}
+.desk_b_4 {
+  /* Four columns */
+  width: 48.97959%;
+  /* Four columns */
+  max-width: 48.97959%;
+  float: left;
+}
+.desk_b_4_alt {
+  /* Four columns */
+  width: 47.95918%;
+  float: left;
+  padding-right: 2.04082%;
+  margin-right: 2.04082%;
+}
+.desk_b_4_alt:nth-child(2n+2) {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.desk_b_5 {
+  /* Five columns */
+  width: 61.73469%;
+  /* Five columns */
+  max-width: 61.73469%;
+  float: left;
+}
+.desk_b_6 {
+  /* Six columns */
+  width: 74.4898%;
+  /* Six columns */
+  max-width: 74.4898%;
+  float: left;
+}
+.desk_b_7 {
+  /* Seven columns */
+  width: 87.2449%;
+  /* Seven columns */
+  max-width: 87.2449%;
+  float: left;
+}
+.desk_b_8 {
+  /* Eight columns */
+  width: 100%;
+  /* Eight columns */
+  max-width: 100%;
+  float: left;
+}
+.desk_b_3_columns {
+  /* 1/3 columns */
+  width: 31.93878%;
+  float: left;
+}
+.mob_col_gutter, .tab_col_gutter {
+  margin-right: 0px;
+}
+.col_gutter, .large_col_gutter, .desk_col_gutter, .desk_b_col_gutter {
+  margin-right: 2.04082%;
+}
+.responsive_grid_gutter {
+  margin-right: 2.04082%;
+  /* ------------------------------------------------------ Layout Desktop B variations */
+}
+.responsive_grid_gutter:nth-child(2n) {
+  margin-right: 2.04082%;
+}
+.responsive_grid_gutter:nth-child(3n) {
+  margin-right: 2.04082%;
+}
+.responsive_grid_gutter:nth-child(4n) {
+  margin-right: 0px;
+}
+.desk_b_4 {
+  /* ------------------------------------------------------ Layout grid - used in columns */
+}
+.desk_b_4 .tab_1 {
+  width: 21.875%;
+}
+.desk_b_4 .tab_5 {
+  width: 73.95833%;
+}
+.desk_b_4 .col_gutter {
+  margin-right: 4.16667%;
+}
+.grid_large_device {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.grid_large_device .grid_item {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* FLIP */
+}
+.grid_large_device .grid_item:nth-of-type(2), .grid_large_device .grid_item:nth-of-type(3), .grid_large_device .grid_item:nth-of-type(4) {
+  margin-left: 2.04082%;
+}
+.grid {
+  /* ------------------------------------------------------ Layout grid for articles - used in columns */
+}
+.grid .grid_item:nth-of-type(2), .grid .grid_item:nth-of-type(3), .grid .grid_item:nth-of-type(4) {
+  margin-left: 2.04082%;
+}
+.grid_articles .grid_item, .grid_articles .grid_item_alt {
+  margin-left: 2.04082%;
+}
+.desk_a_1 {
+  /* one columns */
+  width: 6.77966%;
+  float: left;
+}
+.desk_a_2 {
+  /* Two columns */
+  width: 15.25424%;
+  float: left;
+}
+.desk_a_3 {
+  /* Three columns */
+  width: 23.72881%;
+  float: left;
+}
+.desk_a_4 {
+  /* Four columns */
+  width: 32.20339%;
+  /* Four columns */
+  max-width: 32.20339%;
+  float: left;
+}
+.desk_a_5 {
+  /* Five columns */
+  width: 40.67797%;
+  /* Five columns */
+  max-width: 40.67797%;
+  float: left;
+}
+.desk_a_6 {
+  /* Six columns */
+  width: 49.15254%;
+  /* Six columns */
+  max-width: 49.15254%;
+  float: left;
+}
+.desk_a_6_alt {
+  /* Six columns */
+  width: 48.30508%;
+  float: left;
+  padding-right: 1.69492%;
+  margin-right: 1.69492%;
+}
+.desk_a_6_alt:nth-child(2n+2) {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.desk_a_7 {
+  /* Seven columns */
+  width: 57.62712%;
+  /* Seven columns */
+  max-width: 57.62712%;
+  float: left;
+}
+.desk_a_8 {
+  /* eight columns */
+  width: 66.10169%;
+  /* eight columns */
+  max-width: 66.10169%;
+  float: left;
+}
+.desk_a_9 {
+  /* nine columns */
+  width: 74.57627%;
+  /* nine columns */
+  max-width: 74.57627%;
+  float: left;
+}
+.desk_a_10 {
+  /* ten columns */
+  width: 83.05085%;
+  /* ten columns */
+  max-width: 83.05085%;
+  float: left;
+}
+.desk_a_11 {
+  /* eleven columns */
+  width: 91.52542%;
+  /* eleven columns */
+  max-width: 91.52542%;
+  float: left;
+}
+.desk_a_12 {
+  /* Twelve columns */
+  width: 100%;
+  /* Twelve columns */
+  max-width: 100%;
+  float: left;
+}
+.mob_col_gutter, .tab_col_gutter, .desk_b_col_gutter {
+  margin-right: 0px;
+}
+.col_gutter, .large_col_gutter, .desk_col_gutter, .desk_a_col_gutter {
+  margin-right: 1.69492%;
+}
+.responsive_grid_gutter {
+  margin-right: 1.69492%;
+  /* ------------------------------------------------------ Layout grid - used in columns */
+}
+.responsive_grid_gutter:nth-child(2n) {
+  margin-right: 1.69492%;
+}
+.responsive_grid_gutter:nth-child(3n) {
+  margin-right: 1.69492%;
+}
+.responsive_grid_gutter:nth-child(4n) {
+  margin-right: 0px;
+}
+.grid_large_device .grid_item:nth-of-type(2), .grid_large_device .grid_item:nth-of-type(3), .grid_large_device .grid_item:nth-of-type(4) {
+  margin-left: 1.69492%;
+}
+.grid {
+  /* ------------------------------------------------------ Layout grid for articles - used in columns */
+}
+.grid .grid_item:nth-of-type(2), .grid .grid_item:nth-of-type(3), .grid .grid_item:nth-of-type(4) {
+  margin-left: 1.69492%;
+}
+.grid_articles .grid_item, .grid_articles .grid_item_alt {
+  margin-left: 1.69492%;
+}
+.padding_block {
+  padding: 0px 20px;
+  padding: 0px 1.25rem;
+  /* ------------------------------------------------------ Header */
+}
+.mobile_header {
+  display: block;
+  text-align: center;
+  margin: 0px !important;
+  padding: 0px 20px 0px 20px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.site_header {
+  display: block;
+  position: relative;
+  padding: 10px 20px 10px 20px ;
+  background: white;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.site_header figure {
+  text-align: center;
+}
+.site_header img {
+  max-width: 140px ;
+  display: inline-block;
+  margin: 0px auto;
+}
+@else {
+  /* 10 */
+}
+.site_header small {
+  line-height: 30px;
+  line-height: 1.875rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+}
+.site_header .social {
+  margin-bottom: 0px;
+}
+.site_header .mob_1 {
+  width: 9.375%;
+}
+.site_header .mob_2 {
+  width: 65.625%;
+}
+.site_header .newsletter {
+  line-height: 28px;
+  line-height: 1.75rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  height: 28px ;
+  vertical-align: top;
+  margin-left: 3px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.banner a:link, .banner a:visited {
+  color: black;
+}
+.banner a:hover, .banner a:focus {
+  color: white;
+  text-decoration: none;
+}
+.banner a:hover h1, .banner a:focus h1 {
+  color: white;
+  -moz-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-in;
+  -ms-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+  /* TRIPLE BORDERS */
+}
+h1.banner_title {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 1px;
+  line-height: 0.0625rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  font-weight: 200;
+  text-transform: uppercase;
+  text-align: center;
+  text-indent: -9999px;
+  /* ------------------------------------------------------ Search in header */
+}
+.header_search {
+  float: right;
+}
+.header_search .icon-search {
+  width: 30px ;
+  height: 30px ;
+  display: block;
+  float: right;
+  position: relative;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  color: black;
+  z-index: 90;
+  line-height: 40px;
+  line-height: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  font-size: 24px;
+  font-size: 1.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* TRIPLE BORDERS */
+  text-shadow: 1px 1px 0 #efefef;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.header_search .icon-search:hover, .header_search .icon-search:focus, .header_search .icon-search:active {
+  color: #f16347;
+}
+.sb-search {
+  position: relative;
+  z-index: 1;
+  height: 0px;
+  max-height: 0px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  float: right;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
+}
+.sb-search input.sb-search-input, .sb-search input.sb-search-submit {
+  visibility: hidden;
+  opacity: 0;
+}
+.sb-search-open {
+  height: 40px ;
+  max-height: 400px ;
+  margin-top: 10px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.sb-search-open input.sb-search-input, .sb-search-open input.sb-search-submit {
+  visibility: visible;
+  opacity: 1;
+}
+.sb-search-input {
+  position: relative;
+  top: 0;
+  right: 0;
+  border: none;
+  outline: none;
+  background: white;
+  width: 70% !important;
+  height: 40px ;
+  margin: 0 2.5% 0 0;
+  z-index: 10;
+  font-family: inherit;
+  color: #666;
+}
+@else {
+  /* 10 */
+}
+.sb-search-input::-webkit-input-placeholder {
+  color: #f7c0c0;
+}
+.sb-search-input:-moz-placeholder {
+  color: #f7c0c0;
+}
+.sb-search-input::-moz-placeholder {
+  color: #f7c0c0;
+}
+.sb-search-input:-ms-input-placeholder {
+  color: #f7c0c0;
+}
+.active .icon-search {
+  background: white;
+  color: #3f8f21;
+}
+input.sb-search-submit {
+  font-size: 12px;
+  font-size: 0.75rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  width: 22.5% !important;
+  float: right;
+  height: 40px ;
+  display: block;
+  position: relative;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  background: #3f8f21;
+  color: white;
+  border: none;
+  outline: none;
+  /* Open state */
+}
+@else {
+  /* 10 */
+}
+.sb-search.sb-search-open, .no-js .sb-search {
+  width: 100%;
+}
+.sb-search.sb-search-open .icon-search, .no-js .sb-search .icon-search {
+  background: #ccc;
+  color: #333;
+  z-index: 11;
+}
+.sb-search.sb-search-open .sb-search-submit, .no-js .sb-search .sb-search-submit {
+  z-index: 90;
+  /* ------------------------------------------------------ Toggle Menu */
+}
+.nav_primary {
+  display: none;
+  overflow: hidden;
+  display: block;
+  margin-top: 10px ;
+  font-family: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+}
+@else {
+  /* 10 */
+}
+.nav_primary .icon-list {
+  font-size: 30px;
+  font-size: 1.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 30px;
+  line-height: 1.875rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  display: block;
+  cursor: pointer;
+  height: 30px ;
+  width: 100%;
+  color: #3f8f21;
+  padding: 0px 20px 0px 20px ;
+  background: white;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.nav_primary ul {
+  padding: 0px 20px 0px 20px ;
+  transition: max-height 1s;
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  max-height: 0;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.nav_primary ul li {
+  padding: 0px;
+  display: none;
+  list-style: none;
+}
+.nav_primary a {
+  display: block;
+}
+.nav_primary a:hover, .nav_primary a:focus {
+  color: black;
+}
+.nav_primary.expanded {
+  /* ------------------------------------------------------ Home */
+}
+.nav_primary.expanded .icon-list {
+  background: black;
+}
+.nav_primary.expanded ul {
+  background: white;
+  height: 100%;
+  min-height: 10px ;
+  max-height: 400px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.nav_primary.expanded li {
+  display: list-item;
+  height: 40px ;
+  line-height: 40px;
+  line-height: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  padding: 0 5px;
+  padding: 0 0.3125rem;
+  border-bottom: 1px solid #efefef;
+}
+@else {
+  /* 10 */
+}
+.nav_primary.expanded li:last-child {
+  border-bottom: none;
+}
+.services {
+  /* ------------------------------------------------------ Grid */
+}
+.grid_buttons .grid_item {
+  background: #666;
+  min-height: 50px ;
+  border-bottom: 1px solid #333;
+  display: block;
+}
+@else {
+  /* 10 */
+}
+.grid_buttons .grid_item h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 50px;
+  line-height: 3.125rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  color: #efefef;
+}
+.grid_buttons .grid_item [class^="icon-"], .grid_buttons .grid_item [class*=" icon-"] {
+  color: #3f8f21;
+}
+.grid_buttons .grid_item:hover, .grid_buttons .grid_item:focus {
+  background: #f16347;
+  text-decoration: none;
+}
+.grid_buttons .grid_item:hover h3, .grid_buttons .grid_item:focus h3 {
+  color: #3f8f21;
+}
+.grid_buttons_alt {
+  text-align: center;
+  width: 100%;
+  display: block;
+  /* ------------------------------------------------------ single header animation */
+}
+.grid_buttons_alt .grid_item {
+  min-height: 20px ;
+  display: inline-block;
+  margin-right: 5px ;
+  padding-right: 8px ;
+  border-right: 1px solid #666;
+  color: #f16347;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.grid_buttons_alt .grid_item:last-child {
+  border-right: none;
+}
+.grid_buttons_alt .grid_item h3 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 20px;
+  line-height: 1.25rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  vertical-align: middle;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  color: inherit;
+}
+.grid_buttons_alt .grid_item [class^="icon-"], .grid_buttons_alt .grid_item [class*=" icon-"] {
+  color: #3f8f21;
+  display: none;
+}
+.grid_buttons_alt .grid_item:hover h3, .grid_buttons_alt .grid_item:focus h3 {
+  color: #3f8f21;
+}
+.scroll_box {
+  display: none;
+  visibility: hidden;
+  /* ------------------------------------------------------ add.This */
+}
+.at-resp-share-element a {
+  margin-bottom: 0px !important;
+}
+.at-share-btn:first-child {
+  margin-left: 0px !important;
+}
+.social_box {
+  margin-top: 20px ;
+  margin-bottom: 30px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.addthis_sharing_toolbox a {
+  line-height: 1em;
+}
+.at4-show {
+  display: table;
+}
+.at-share-tbx-element .at-share-btn {
+  display: table-cell;
+  padding-right: 4px ;
+}
+@else {
+  /* 10 */
+}
+.at-share-tbx-element .at-share-btn .at300bs {
+  display: inherit !important;
+  /* ------------------------------------------------------ Sticky Stickies */
+}
+.sticky_icon {
+  width: 3%;
+  display: inline-block;
+  vertical-align: top;
+}
+.sticky_icon [class^="icon-"], .sticky_icon [class*=" icon-"] {
+  font-size: 16px;
+  font-size: 1rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  color: #f16347;
+  vertical-align: super;
+}
+.sticky_title {
+  width: 95%;
+  display: inline-block;
+  /* ------------------------------------------------------ Comments */
+}
+.comment_box {
+  background: #3f8f21;
+  color: white !important;
+  display: block;
+  height: 32px ;
+  width: auto;
+  font-size: 12px;
+  font-size: 0.75rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 32px;
+  line-height: 2rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  text-align: center;
+  padding: 0px 5px 0px 5px ;
+  -ms-transition: all 0.3s ease-in 0s !important;
+  -moz-transition: all 0.3s ease-in 0s !important;
+  -webkit-transition: all 0.3s ease-in 0s !important;
+  transition: all 0.3s ease-in 0s !important;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.comment_box [class^="icon-"], .comment_box [class*=" icon-"] {
+  font-size: 18px;
+  font-size: 1.125rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+}
+.comment_box:hover, .comment_box:focus {
+  background: #09c;
+  text-decoration: none;
+}
+.comment_list {
+  padding: 0px;
+  margin: 0px;
+  /* ------------------------------------------------------ Search */
+}
+.comment_list .comment_author {
+  display: block;
+}
+.comment_list dt {
+  padding-top: 20px ;
+  border-top: 1px solid #666;
+  margin-bottom: 20px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.comment_list dt .comment_author {
+  font-weight: bold;
+  font-size: 20px;
+  font-size: 1.25rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  text-transform: capitalize;
+}
+.comment_list dt small {
+  color: #ccc;
+}
+.comment_list dt:first-child {
+  border-top: none;
+  padding-top: 0px;
+}
+.comment_list dd {
+  list-style-type: none;
+  margin: 0px 0px 20px 0px ;
+  border-bottom: 1px solid #333;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.comment_list dd p:last-child {
+  margin-bottom: 0px;
+}
+.comment_list img.wp-smiley {
+  width: auto;
+}
+.comment_list ul.children {
+  background: #292929;
+  padding: 5px ;
+  margin-left: 10px ;
+  margin-bottom: 20px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.comment_list ul.children dd {
+  margin: 0px 0px 10px 0px ;
+  border-bottom: 0px;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.search {
+  /* ------------------------------------------------------ Pagination */
+}
+.search input[type="search"] {
+  width: 100%;
+}
+.pagination {
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  line-height: 30px;
+  line-height: 1.875rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  height: 30px ;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px ;
+  margin-bottom: 20px ;
+  border-top: 1px solid #ccc;
+  padding-top: 10px ;
+  margin-top: 20px ;
+  /* ------------------------------------------------------ Archives */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.pagination .nav_text {
+  vertical-align: top;
+  line-height: 28px;
+  line-height: 1.75rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+}
+.pagination span {
+  font-size: 18px;
+  font-size: 1.125rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+}
+.pagination [class^="icon-"], .pagination [class*=" icon-"] {
+  font-size: 30px;
+  font-size: 1.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  vertical-align: sub;
+  height: 22px ;
+  display: inline-block;
+}
+@else {
+  /* 10 */
+}
+.pagination a:link, .pagination a:visited {
+  color: #3f8f21;
+}
+.pagination a:link [class^="icon-"], .pagination a:visited [class^="icon-"], .pagination a:link [class*=" icon-"], .pagination a:visited [class*=" icon-"] {
+  color: #3f8f21;
+}
+.pagination a:hover, .pagination a:focus {
+  color: #f16347;
+  text-decoration: none;
+}
+.pagination a:hover [class^="icon-"], .pagination a:focus [class^="icon-"], .pagination a:hover [class*=" icon-"], .pagination a:focus [class*=" icon-"] {
+  color: #f16347;
+}
+.pagination .inactive {
+  margin-right: 20px ;
+}
+@else {
+  /* 10 */
+}
+.pagination .current {
+  margin-right: 20px ;
+  color: white;
+  background: #3f8f21;
+  border-radius: 40px;
+  padding-right: 6px ;
+  padding-left: 6px ;
+  display: inline-block;
+  width: 18px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.pagination .pagination_arrows {
+  display: inline-block;
+  margin-right: 5px ;
+  vertical-align: middle;
+  width: 30px ;
+  text-align: center;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.pagination .previous {
+  float: left;
+}
+.pagination .next {
+  float: right;
+}
+.archive_block {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px ;
+  margin-bottom: 20px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.archive_block:nth-last-child(2), .archive_block:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+ul.menu {
+  padding: 0px;
+  /* ------------------------------------------------------ Buttons */
+}
+ul.menu li {
+  list-style-type: none;
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 18px;
+  line-height: 1.125rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  margin-right: 0px;
+  margin-left: 3px ;
+}
+@else {
+  /* 10 */
+}
+ul.menu li.current-page a, ul.menu li.current_page_item a, ul.menu li.current-menu-item a, ul.menu li.current-category a, ul.menu li.current-page-parent a, ul.menu li.current_page_parent a, ul.menu li.current-page-ancestor a, ul.menu li.current_page_ancestor a {
+  color: #f16347;
+  text-decoration: underline;
+}
+.button, .big_button, .full_button, .alt_button {
+  font-family: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+  width: 100%;
+  background: #3f8f21;
+  font-size: 16px;
+  font-size: 1rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 38px;
+  line-height: 2.375rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  height: 40px ;
+  text-decoration: none !important;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  -webkit-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  /* TRIPLE BORDERS */
+  color: white;
+}
+@else {
+  /* 10 */
+}
+.button:link, .big_button:link, .full_button:link, .alt_button:link, .button:visited, .big_button:visited, .full_button:visited, .alt_button:visited {
+  color: white;
+}
+a.button:hover, a.big_button:hover, a.full_button:hover, a.alt_button:hover, a.button:focus, a.big_button:focus, a.full_button:focus, a.alt_button:focus {
+  background: #521d18;
+  color: white;
+}
+.alt_button {
+  background: #521d18;
+}
+.alt_button:link, .alt_button:visited {
+  color: white;
+}
+a.alt_button:hover, a.alt_button:focus {
+  background: #3f8f21;
+}
+.big_button, .full_button {
+  text-transform: none;
+  max-width: 100%;
+  min-width: 140px ;
+  height: auto;
+  min-height: 40px ;
+  /* ------------------------------------------------------ Image overlay */
+  /* Don't display intro text for small screen devices on the grid image overlay (the overlay text) */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.big_button [class^="icon-"], .full_button [class^="icon-"], .big_button [class*=" icon-"], .full_button [class*=" icon-"] {
+  display: inline-block;
+  width: 10%;
+  text-align: center;
+  vertical-align: super;
+  font-size: 40px;
+  font-size: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  vertical-align: middle;
+}
+.big_button .button_text, .full_button .button_text {
+  display: inline-block;
+  width: 80%;
+  vertical-align: middle;
+}
+.overlay {
+  visibility: hidden;
+  display: none;
+}
+.grid_link img {
+  margin: 0px !important;
+}
+.tint {
+  position: relative;
+  /* ------------------------------------------------------ Video Embed */
+}
+.tint .icon-new {
+  position: absolute;
+  top: 10px ;
+  left: 10px ;
+  font-size: 40px;
+  font-size: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.embed_container {
+  position: relative;
+  margin-bottom: 1em;
+  /* 16/9 ratio */
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  /* ------------------------------------------------------ Video Embed */
+}
+.embed_container iframe, .embed_container object, .embed_container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.downloads {
+  /* ------------------------------------------------------ Box at the bottom of the static page */
+}
+.downloads h3 a [class^="icon-"], .downloads h3 a [class*=" icon-"] {
+  font-size: 1.2em;
+  color: black;
+  margin-right: 3px ;
+}
+@else {
+  /* 10 */
+}
+.downloads h3 a [class^="icon-"]:hover, .downloads h3 a [class*=" icon-"]:hover, .downloads h3 a [class^="icon-"]:focus, .downloads h3 a [class*=" icon-"]:focus {
+  color: #521d18;
+}
+.page_bottom_box {
+  /* ------------------------------------------------------ Contact Form */
+}
+.page_bottom_box p {
+  margin: 0px;
+}
+.wpcf7 {
+  /* ------------------------------------------------------ Mailchimp signup */
+}
+.wpcf7 input, .wpcf7 textarea {
+  margin-bottom: 5px;
+}
+.wpcf7 label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
+  display: block;
+}
+.wpcf7 label .icon-star {
+  font-size: 10px;
+  font-size: 0.625rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  position: relative;
+  top: -5px;
+  top: -0.3125rem;
+}
+.wpcf7 img.ajax-loader {
+  width: auto;
+}
+.wpcf7 .wpcf7-checkbox, .wpcf7 .wpcf7-radio {
+  display: block;
+  line-height: 16px ;
+  margin-bottom: 15px ;
+  margin-top: 5px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.wpcf7 .wpcf7-captchac {
+  width: auto;
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
+  display: inline-block;
+}
+.wpcf7 .wpcf7-captchar {
+  display: inline-block;
+  max-width: 140px;
+  max-width: 8.75rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  margin-left: 10px;
+  margin-left: 0.625rem;
+  vertical-align: top;
+}
+.wpcf7 .wpcf7-submit {
+  width: 100%;
+  max-width: none;
+}
+.wpcf7 .wpcf7-mail-sent-ok, .wpcf7 .wpcf7-validation-errors {
+  background: #3da95e;
+  background: rgba(61, 169, 94, 0.3);
+  padding: 5px;
+  padding: 0.3125rem;
+  display: block;
+  font-weight: 500;
+}
+.wpcf7 .wpcf7-validation-errors {
+  background: #db0000;
+  background: rgba(219, 0, 0, 0.3);
+}
+.wpcf7 .icon-star {
+  color: #3f8f21;
+}
+.mc4wp-notice, .mc4wp-alert {
+  background: rgba(63, 143, 33, 0.2);
+  color: black;
+  font-weight: 600;
+  padding: 0px 5px 0px 5px ;
+  /* From the footer bar */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.newsletter {
+  line-height: 22px;
+  line-height: 1.375rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  height: 18px ;
+  vertical-align: text-top;
+  /* ------------------------------------------------------ Social and icons */
+}
+@else {
+  /* 10 */
+}
+.social {
+  font-size: 20px;
+  font-size: 1.25rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 24px;
+  line-height: 1.5rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  margin-bottom: 5px ;
+  /* ------------------------------------------------------ Footer */
+}
+@else {
+  /* 10 */
+}
+.social a:hover, .social a:focus {
+  text-decoration: none;
+}
+.social [class^="icon-"], .social [class*=" icon-"] {
+  vertical-align: top;
+  font-size: 30px;
+  font-size: 1.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  margin-right: 5px ;
+}
+@else {
+  /* 10 */
+}
+.site_footer {
+  background: #efefef;
+  color: #333;
+}
+.footer_content {
+  padding: 10px 20px 10px 20px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.footer_content a:hover, .footer_content a:focus {
+  color: #333;
+}
+.footer_content .social {
+  margin-bottom: 0px;
+}
+.footer_content .social [class^="icon-"], .footer_content .social [class*=" icon-"] {
+  font-size: 24px;
+  font-size: 1.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  margin-right: 0px;
+  margin-right: 5px ;
+}
+@else {
+  /* 10 */
+}
+.footer_content ul.menu {
+  padding: 0px;
+}
+.footer_content ul.menu li {
+  list-style-type: none;
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-size: 0.75rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 18px;
+  line-height: 1.125rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  margin-left: 0px;
+}
+.footer_top {
+  background: #521d18;
+  color: #efefef;
+}
+.footer_top ul, .footer_top li {
+  line-height: 16px ;
+}
+@else {
+  /* 10 */
+}
+.footer_top p, .footer_top li, .footer_top small {
+  color: #efefef;
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+}
+.footer_top a:link, .footer_top a:visited {
+  color: white;
+}
+.footer_top a:hover, .footer_top a:focus {
+  color: #f16347;
+}
+.footer_bottom {
+  background: #333;
+  color: #efefef;
+}
+.footer_bottom p, .footer_bottom li, .footer_bottom small {
+  color: #efefef;
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+}
+.footer_bottom a:link, .footer_bottom a:visited {
+  color: #3f8f21;
+}
+.footer_bottom a:hover, .footer_bottom a:focus {
+  color: #09c;
+}
+.site_header .mob_1 {
+  /* one columns */
+  width: 20.3125%;
+}
+.site_header .mob_2 {
+  /* Two columns */
+  width: 46.875%;
+}
+.header_search {
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  /* TRIPLE BORDERS */
+  height: 40px ;
+  cursor: pointer;
+}
+@else {
+  /* 10 */
+}
+.header_search .icon-search:before {
+  content: "";
+}
+.header_search .icon-search:after {
+  content: "\e619";
+}
+.header_search .seach_label_text {
+  text-align: left;
+  float: left;
+  font-weight: 700;
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 40px;
+  line-height: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  margin-right: 5px ;
+}
+@else {
+  /* 10 */
+}
+.header_search .icon-search {
+  float: right;
+  width: auto;
+}
+.active {
+  /* ------------------------------------------------------ CUSTOMISATION of flexslider */
+}
+.active .icon-search, .active .seach_label_text {
+  background: white;
+  color: #3f8f21;
+}
+.flexslider {
+  /* ------------------------------------------------------ Content Body */
+}
+.flexslider .flex-direction-nav {
+  top: 40%;
+}
+.section_header h3 {
+  float: left;
+  margin: 0px;
+}
+.section_header h4 {
+  float: right;
+}
+.padding_block {
+  width: 100%;
+  padding: 0px;
+}
+.main_content {
+  padding: 0px 20px 0px 20px ;
+  /* ------------------------------------------------------ Header */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.mobile_header {
+  padding: 0px 20px 0px 20px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.site_header {
+  /* ------------------------------------------------------ Overlay changes */
+  /* Remove underline from overlay text, keep on span */
+}
+.site_header .banner {
+  margin-top: -25px ;
+}
+@else {
+  /* 10 */
+}
+.site_header .social li {
+  text-align: center;
+}
+.site_header .social [class^="icon-"], .site_header .social [class*=" icon-"] {
+  margin-right: 2px ;
+}
+@else {
+  /* 10 */
+}
+.site_header .tab_2 {
+  /* two columns */
+  width: 31.57895%;
+}
+.site_header img {
+  max-width: 220px ;
+}
+@else {
+  /* 10 */
+}
+a.grid_link:hover {
+  /* Image overlay  */
+}
+a.grid_link:hover .overlay {
+  border-bottom: none;
+  visibility: visible;
+  display: block;
+}
+a.grid_link:hover span {
+  visibility: visible;
+  display: block;
+}
+.image_text {
+  position: absolute;
+  padding: 20px 0px 20px 0px ;
+  text-align: center;
+  width: 100%;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.tint {
+  cursor: pointer;
+  margin-bottom: 10px ;
+}
+@else {
+  /* 10 */
+}
+.tint img {
+  vertical-align: top;
+  margin-bottom: 0px;
+}
+.tint figcaption {
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 22px;
+  font-size: 1.375rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 28px;
+  line-height: 1.75rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  color: white;
+  text-transform: uppercase;
+}
+.tint figcaption span {
+  margin: 10px 0px 0px 0px ;
+  font-family: "adobe-text-pro", Georgia, serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 17px;
+  line-height: 1.0625rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  color: white;
+  text-transform: capitalize;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.tint:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: none;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.tint:hover:before {
+  background: #f16347;
+  background: rgba(241, 99, 71, 0.6);
+  /* ------------------------------------------------------ Buttons */
+}
+.big_button {
+  max-width: 300px  !important;
+}
+@else {
+  /* 10 */
+}
+.full_button {
+  max-width: 100% !important;
+  /* ------------------------------------------------------ Content Styles - includes images */
+}
+.content_styles {
+  /* ------------------------------------------------------ add.This */
+}
+.content_styles figure.medium, .content_styles figure.medium-16x9 {
+  float: left;
+  max-width: 53.33333%;
+  margin-left: -10%;
+  padding-right: 3.33333%;
+  padding-top: 6px ;
+}
+@else {
+  /* 10 */
+}
+.content_styles figure.medium.align_right, .content_styles figure.medium-16x9.align_right {
+  float: right;
+  margin-left: 0px;
+  margin-right: -10%;
+  padding-right: 0px;
+  padding-left: 3.33333%;
+}
+.social_box {
+  margin-top: 30px ;
+  margin-bottom: 40px ;
+  /* ------------------------------------------------------ Sticky Stickies */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.sticky_icon {
+  width: 2%;
+}
+.sticky_title {
+  width: 96%;
+  /* ------------------------------------------------------ Comments */
+}
+.comment_box {
+  width: 110px ;
+  font-size: 12px;
+  font-size: 0.75rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  /* ------------------------------------------------------ Grid styles */
+}
+@else {
+  /* 10 */
+}
+.comment_box [class^="icon-"], .comment_box [class*=" icon-"] {
+  font-size: 22px;
+  font-size: 1.375rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  vertical-align: sub;
+}
+.grid_buttons_alt {
+  /* ------------------------------------------------------ Pagination */
+}
+.grid_buttons_alt .grid_item {
+  min-height: 30px ;
+  margin-right: 10px ;
+  padding-right: 5px ;
+  padding-left: 5px ;
+  border-right: none;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.grid_buttons_alt .grid_item h3 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 30px;
+  line-height: 1.875rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+}
+.grid_buttons_alt .grid_item [class^="icon-"], .grid_buttons_alt .grid_item [class*=" icon-"] {
+  display: inline-block;
+  margin-right: 4px ;
+}
+@else {
+  /* 10 */
+}
+.grid_buttons_alt .grid_item:hover, .grid_buttons_alt .grid_item:focus {
+  text-decoration: none;
+  background: black;
+}
+.pagination {
+  font-size: 18px;
+  font-size: 1.125rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 40px;
+  line-height: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  /* ------------------------------------------------------ Special DIVS in content */
+}
+.pagination .nav_text {
+  vertical-align: top;
+  line-height: 38px;
+  line-height: 2.375rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+}
+.pagination [class^="icon-"], .pagination [class*=" icon-"] {
+  font-size: 40px;
+  font-size: 2.5rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  vertical-align: sub;
+}
+.pagination .current {
+  width: 28px ;
+}
+@else {
+  /* 10 */
+}
+.double_single_block {
+  margin-bottom: 40px ;
+}
+@else {
+  /* 10 */
+}
+.double_margin_top {
+  margin-top: 2.5rem;
+  /* ------------------------------------------------------ Footer */
+}
+.footer_align_right {
+  text-align: right !important;
+}
+.site_header {
+  padding: 0px;
+}
+.site_header #nav_anchor_container {
+  display: none;
+  visibility: hidden;
+}
+.site_header .desk_b_6 {
+  /* Six columns */
+  width: 74.4898%;
+}
+.site_header .desk_b_2 {
+  /* Two columns */
+  width: 23.46939%;
+}
+.site_header .banner {
+  margin-top: 0px;
+}
+.site_header .header_content {
+  padding: 15px 20px 15px 20px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.site_header .header_top {
+  background: #521d18;
+  color: #efefef;
+  padding-right: 20px ;
+  padding-left: 20px ;
+  padding-top: 2px ;
+  padding-bottom: 2px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.site_header .header_top p, .site_header .header_top li, .site_header .header_top small {
+  color: #efefef;
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+}
+.site_header .header_top a:link, .site_header .header_top a:visited {
+  color: white;
+}
+.site_header .header_top a:hover, .site_header .header_top a:focus {
+  color: #f16347;
+}
+.site_header .social {
+  text-align: right !important;
+  margin: 2px 0px 2px 0px ;
+  display: inline-block;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.site_header .social [class^="icon-"], .site_header .social [class*=" icon-"] {
+  font-size: 22px;
+  font-size: 1.375rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+}
+.site_header .social li {
+  margin: 0px 0px 0px 5px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.site_header .header_widget {
+  text-align: right;
+}
+.site_header figure {
+  display: block !important;
+}
+.site_header figure img {
+  display: block;
+  margin: 0px;
+}
+.site_header h1.banner_title {
+  line-height: 0px;
+  line-height: 0rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  font-size: 1px;
+  font-size: 0.0625rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+}
+.site_header .cart_link {
+  display: inline-block !important;
+  float: right;
+  color: white;
+}
+.site_header .cart_link:hover, .site_header .cart_link:focus {
+  color: ;
+  text-decoration: none;
+}
+.site_header .header_search {
+  height: 62px ;
+}
+@else {
+  /* 10 */
+}
+.site_header .header_search .icon-search {
+  height: 62px ;
+  line-height: 62px;
+  line-height: 3.875rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+}
+@else {
+  /* 10 */
+}
+.site_header .header_search .icon-search:before {
+  vertical-align: super;
+}
+.site_header .header_search .icon-search:after {
+  vertical-align: super;
+}
+.site_header .header_search .icon-search:hover, .site_header .header_search .icon-search:focus {
+  color: ;
+  text-decoration: none;
+}
+.site_header .seach_label_text {
+  display: none !important;
+}
+.site_header .sb-search-input {
+  width: 82% !important;
+}
+.mobile_header {
+  text-align: left;
+  padding: 0px;
+  /* ------------------------------------------------------ Menu */
+}
+#nav {
+  display: inline-block !important;
+  float: right;
+}
+.nav_primary {
+  clear: none;
+  display: block;
+  visibility: visible;
+  height: auto;
+  display: block;
+  margin-top: 0px;
+  min-height: 62px ;
+  background: none;
+  width: 100%;
+  overflow: visible;
+  position: relative;
+  z-index: 10;
+}
+@else {
+  /* 10 */
+}
+.nav_primary .icon-list {
+  display: none;
+  visibility: hidden;
+}
+.nav_primary ul {
+  margin: 0px;
+  padding: 0px 10px 0px 0px ;
+  text-align: center;
+  background: none;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.nav_primary ul li {
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 62px;
+  line-height: 3.875rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  text-transform: uppercase;
+  display: inline-block;
+  padding-right: 5px ;
+  padding-left: 5px ;
+  vertical-align: bottom;
+  position: relative;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.nav_primary ul li:first-child {
+  margin-left: 0px;
+}
+.nav_primary ul li.current-page a, .nav_primary ul li.current-menu-item a, .nav_primary ul li.current-page-ancestor a, .nav_primary ul li.current-menu-ancestor a, .nav_primary ul li.current-category-ancestor a, .nav_primary ul li.current-category a, .nav_primary ul li.current-post-ancestor a {
+  color: white;
+  text-decoration: none;
+}
+.nav_primary ul li.current-page a span, .nav_primary ul li.current-menu-item a span, .nav_primary ul li.current-page-ancestor a span, .nav_primary ul li.current-menu-ancestor a span, .nav_primary ul li.current-category-ancestor a span, .nav_primary ul li.current-category a span, .nav_primary ul li.current-post-ancestor a span {
+  background: #3f8f21;
+  padding: 5px 5px 5px 5px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.nav_primary ul li ul.sub-menu {
+  display: none;
+  position: absolute;
+  z-index: 101;
+  top: 44px ;
+  left: 0;
+}
+@else {
+  /* 10 */
+}
+.nav_primary ul li ul.sub-menu li {
+  float: none;
+  display: block;
+  width: 100%;
+  margin: 0px;
+  min-height: 30px ;
+  line-height: 30px;
+  line-height: 1.875rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  font-size: 14px;
+  font-size: 0.875rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  text-transform: capitalize;
+  width: 180px ;
+  text-align: left;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.nav_primary ul li ul.sub-menu li a {
+  height: auto;
+  padding: 0px 5px 0px 5px ;
+  border-bottom: 1px solid #3f8f21;
+  background: #efefef;
+  background: rgba(239, 239, 239, .90);
+  color: #3f8f21;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.nav_primary ul li ul.sub-menu li a:hover, .nav_primary ul li ul.sub-menu li a:focus {
+  color: #f16347;
+  text-decoration: none;
+  border-bottom: 1px solid #f7c0c0;
+}
+.nav_primary ul li ul.sub-menu li a span {
+  background: none;
+  padding: 0px;
+}
+.nav_primary ul li:hover ul.sub-menu {
+  display: block;
+}
+.nav_primary a {
+  height: 62px ;
+}
+@else {
+  /* 10 */
+}
+.nav_primary a:link, .nav_primary a:visited {
+  color: #3f8f21;
+}
+.nav_primary a:hover, .nav_primary a:focus {
+  color: #f16347;
+  text-decoration: none;
+}
+body.archive .nav_primary ul li.menu-item-263 a, body.single-post .nav_primary ul li.menu-item-263 a {
+  color: ;
+}
+body.home {
+  /* ------------------------------------------------------ add.This */
+}
+body.home .nav_primary ul li.menu-item-home a {
+  color: ;
+}
+.social_box {
+  /* ------------------------------------------------------ Content Styles - includes images */
+}
+.content_styles {
+  /* ------------------------------------------------------ Box at the bottom of the static page */
+}
+.content_styles figure.medium, .content_styles figure.size-medium-16x9 {
+  max-width: 65.75342%;
+  margin-left: -10.9589%;
+  padding-right: 2.73973%;
+}
+.content_styles figure.medium.align_right, .content_styles figure.medium-16x9.align_right {
+  margin-left: 0px;
+  margin-right: -10.9589%;
+  padding-right: 0px;
+  padding-left: 2.73973%;
+}
+.page_bottom_box {
+  /* ------------------------------------------------------ Grid */
+}
+.page_bottom_box h2 {
+  line-height: 1em;
+  margin-bottom: 20px ;
+}
+@else {
+  /* 10 */
+}
+.grid_buttons .grid_item:nth-child(2n+2) {
+  margin: 0px;
+  border-left: 1px solid #333;
+}
+.site_header img {
+  max-width: 260px ;
+}
+@else {
+  /* 10 */
+}
+.site_header .desk_a_8 {
+  /* eight columns */
+  width: 66.10169%;
+}
+.site_header .desk_a_4 {
+  /* Four columns */
+  width: 32.20339%;
+}
+.site_header .header_search {
+  height: 73px ;
+}
+@else {
+  /* 10 */
+}
+.site_header .header_search .icon-search {
+  height: 73px ;
+  line-height: 73px;
+  line-height: 4.5625rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+}
+@else {
+  /* 10 */
+}
+.nav_primary {
+  min-height: 73px ;
+  /* ------------------------------------------------------ Structure */
+}
+@else {
+  /* 10 */
+}
+.nav_primary ul li {
+  font-family: "tablet-gothic", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+  line-height: 73px;
+  line-height: 4.5625rem;
+  /* Usage */
+  /*
+body {
+  @include line-height (16);
+}
+*/
+  /* Placeholder
+  ========================================================================== */
+  padding-right: 10px ;
+  padding-left: 10px ;
+}
+@else {
+  /* 10 */
+}
+@else {
+  /* 10 */
+}
+.nav_primary a {
+  height: 73px ;
+}
+@else {
+  /* 10 */
+}
+.main, .footer_content, .header_content, .header_top_content {
+  max-width: 1240px ;
+  margin: 0px auto;
+}
+@else {
+  /* 10 */
+}
+.main_content {
+  /* ------------------------------------------------------ Content Styles - includes images */
+}
+.content_styles {
+  /* ------------------------------------------------------ Shopp styles */
+}
+.content_styles figure.medium, .content_styles figure.size-medium-16x9 {
+  max-width: 58.53659%;
+  margin-left: -19.5122%;
+  padding-right: 2.43902%;
+}
+.content_styles figure.medium.align_right, .content_styles figure.medium-16x9.align_right {
+  margin-left: 0px;
+  margin-right: -19.5122%;
+  padding-right: 0px;
+  padding-left: 2.43902%;
+}
+.product h3.alt {
+  font-size: 22px;
+  font-size: 1.375rem;
+  /* Usage */
+  /*
+body {
+  @include font-size(16);
+}
+*/
+  /* Cross browser inline block
+  ========================================================================== */
+}

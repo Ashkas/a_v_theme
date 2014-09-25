@@ -1,0 +1,22 @@
+/* ------------------------------------------------------ Pagination */
+
+.pagination {
+
+	@include font-size(18);
+	@include line-height(40);
+	
+	.nav_text {
+		vertical-align: top;
+		@include line-height(38);
+	}
+	
+	[class^="icon-"], [class*=" icon-"] {
+		
+		@include font-size(40);
+		vertical-align: sub;
+	}
+	
+	.current {
+		width: u((28rem/16));
+	}
+}

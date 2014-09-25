@@ -1,0 +1,143 @@
+/* ------------------------------------------------------ Search in header */
+
+.header_search {
+	float: right;
+	
+	.icon-search  {
+		width: u((30rem/16));
+		height: u((30rem/16));
+		display: block;
+		float: right;
+		//position: absolute;
+		position: relative;
+		right: 0;
+		top: 0;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		cursor: pointer;
+		color: black;
+		z-index: 90;
+		//background: white;
+		@include line-height(40);
+		@include font-size(24);
+		@include transition(all, .3s, ease);
+		text-shadow: 1px 1px 0 $verylightgrey;
+		
+		&:hover, &:focus, &:active {
+			color: $orange;
+		}
+	}
+}
+
+.sb-search {
+	position: relative;
+	z-index: 1;
+	height: 0px;
+	max-height: 0px;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	transition: .5s;
+	float: right;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	width: 100%;
+		
+	input.sb-search-input, input.sb-search-submit { 
+		
+		visibility: hidden;
+		opacity: 0;
+	}
+}
+
+.sb-search-open {
+	
+	height: u((40rem/16));
+	max-height: u((400rem/16));
+	margin-top: u((10rem/16));
+	
+	input.sb-search-input, input.sb-search-submit { 
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+
+.sb-search-input {
+	//position: absolute;
+	position: relative;
+	//visibility: hidden;
+	top: 0;
+	right: 0;
+	border: none;
+	outline: none;
+	background: white;
+	width: 70% !important;
+	height: u((40rem/16));
+	margin: 0 2.5% 0 0;
+	z-index: 10;
+	font-family: inherit;
+	color: $midgrey;
+}
+
+.sb-search-input::-webkit-input-placeholder {
+	color: $lightred;
+}
+
+.sb-search-input:-moz-placeholder {
+	color: $lightred;
+}
+
+.sb-search-input::-moz-placeholder {
+	color: $lightred;
+}
+
+.sb-search-input:-ms-input-placeholder {
+	color: $lightred;
+}
+
+.active { 
+
+	.icon-search {
+		background: white;
+		color: $green;
+	}
+}
+
+input.sb-search-submit  {
+	@include font-size(12);
+	width: 22.5% !important;
+	float: right;
+	height: u((40rem/16));
+	display: block;
+	//position: absolute;
+	position: relative;
+	right: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	cursor: pointer;
+	background: $green;
+	color: white;
+	border: none;
+	outline: none;
+}
+
+/* Open state */
+.sb-search.sb-search-open,
+.no-js .sb-search {
+	width: 100%;
+}
+
+.sb-search.sb-search-open .icon-search,
+.no-js .sb-search .icon-search {
+	background: $lightgrey;
+	color: $darkgrey;
+	z-index: 11;
+}
+
+.sb-search.sb-search-open .sb-search-submit,
+.no-js .sb-search .sb-search-submit {
+	z-index: 90;
+}

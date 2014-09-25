@@ -1,0 +1,29 @@
+.header_search {
+	height: u((62rem/16));
+	
+	.icon-search {
+		height: u((62rem/16));
+		@include line-height(62);
+		
+		&:before {
+			vertical-align: super;
+		}
+		
+		&:after {
+			vertical-align: super;
+		}
+		
+		&:hover, &:focus {
+			color: $red;
+			text-decoration: none;
+		}
+	}
+}
+
+.seach_label_text {
+	display: none !important;
+}
+
+.sb-search-input {
+	width: 82% !important;
+}

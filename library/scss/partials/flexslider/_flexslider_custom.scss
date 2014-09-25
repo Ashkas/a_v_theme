@@ -1,0 +1,122 @@
+/* ------------------------------------------------------ CUSTOMISATION of flexslider */
+
+
+.loading {
+	min-height: u(150rem/16);
+}
+
+.wf-active {
+	.loading {
+		background: transparent url(../images/spinner.gif) no-repeat center center !important;
+	}
+}
+
+.flexslider {
+	@include box-shadow(0px, 0px, 0px);
+	@include border-radius(0px);
+	border: none;
+	margin: 0px;
+	margin-bottom: u((20rem/16)) !important;
+	background: none;
+	
+	.slides {
+		
+		li {
+			list-style-image: none;
+		}
+		
+		img {
+			margin: 0px;
+		}
+		
+		figcaption {
+			display: none;
+		}
+		
+		.slide_image {
+			margin-bottom: u((20rem/16));
+		}
+		
+		.slide_text_box {
+			padding: u((10rem/16));
+			
+			p {
+				font-style: italic;
+				margin: 0px;
+				@include font-size(18);
+				color: $verylightgrey;
+				text-align: center;
+			}
+		}
+	}
+	
+	.flex-control-nav {
+	    top: u(15rem/16);
+	    left: u(15rem/16);
+	    position: absolute;
+	    height: u(30rem/16);
+	    width: auto;
+		
+		li a {
+			height: 14px !important;
+			width: 14px !important;
+			@include border-radius(16px);
+			background: white !important;
+			
+			&.flex-active {
+				background: $red !important;
+				border: none;
+			}
+		}
+	}
+	
+	.flex-direction-nav {
+		
+		margin: u(0px 0px (5rem/16) 0px);
+		padding: 0px;
+		position: absolute;
+		width: 100%;
+		top: 35%;
+		
+		a {
+			display: block;
+			//@include border-radius(24px,24px,24px,24px);
+			height: u((40rem/16));
+			width: u((40rem/16));
+			text-align: center;
+			text-indent: 0px;
+			color: white;
+			text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+			opacity: 100;
+			top: auto;
+			@include font-size(50);
+			@include line-height(40);
+			cursor: pointer;
+			
+			&:hover,&:focus {
+				text-decoration: none;
+				color: $red;
+			}
+			
+			&.flex-prev {
+				left: 0px;
+				bottom: 0px;
+				margin-top: 0px;
+			}
+			
+			&.flex-next {
+				right: 0;
+				bottom: 0px;
+				margin-top: 0px;
+			}
+		}
+		
+		li {
+			display: inline;
+			
+			&:last-child {
+				margin-left: u(60rem/16);
+			}
+		}
+	}
+}

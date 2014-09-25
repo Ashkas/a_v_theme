@@ -1,0 +1,119 @@
+// config
+$px-only:true; /* Refer - http://davidwalsh.name/rem-px-browser-function-sass */
+
+$altFont: "tablet-gothic", Helvetica, Arial, sans-serif;
+$titleFont: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
+$bodyFont: "adobe-text-pro", Georgia, serif;
+
+/* ------------------------------------------------------ mixins */
+
+@import "modules/_ie_px_fallback.scss";
+
+@import "modules/mixins.scss";
+
+@import "modules/custom_mixins.scss";
+
+@import "modules/css3-mixins.scss";
+
+/* ------------------------------------------------------ Colours */
+
+@import "partials/colours.scss";
+
+/* ------------------------------------------------------ Normalise */
+
+@import "partials/normalize.scss";
+	
+/* ------------------------------------------------------ Semantic Divs - Reusables */
+
+@import "partials/helpers/helpers.scss";
+@import "partials/helpers/helpers_mob_landscape.scss";
+@import "partials/helpers/helpers_tab.scss";
+@import "partials/helpers/helpers_desk.scss";
+@import "partials/helpers/helpers_desk_large.scss";
+
+/* ------------------------------------------------------ Fonts */
+
+@import "partials/fonts.scss";
+
+/* ------------------------------------------------------ Flexslider */
+
+@import "partials/flexslider_plugin.scss";
+@import "partials/flexslider/flexslider_custom.scss";
+@import "partials/flexslider/flexslider_custom_tab.scss";
+@import "partials/flexslider/flexslider_custom_desk.scss";
+@import "partials/flexslider/flexslider_custom_desk_large.scss";
+
+/* ------------------------------------------------------ Fresco */
+
+@import "partials/fresco/fresco_plugin.scss";
+@import "partials/fresco/fresco_custom_landscape.scss";
+@import "partials/fresco/fresco_custom_portrait.scss";
+@import "partials/fresco/fresco_custom.scss";
+
+/* ------------------------------------------------------ Typography */
+
+@import "partials/typography/typography.scss";	
+@import "partials/typography/typography_tab.scss";	
+@import "partials/typography/typography_desk.scss";
+
+/* ------------------------------------------------------ Offcanvas */
+
+@import "partials/offcanvas/offcanvas.scss";
+@import "partials/offcanvas/offcanvas_desk.scss";
+
+/* ------------------------------------------------------ Inputs */
+
+@import "partials/inputs.scss";
+
+/* ------------------------------------------------------ Images */
+
+@import "partials/images.scss";
+
+/* ------------------------------------------------------ Grid */
+
+@import "partials/grid/_grid_mob.scss";
+@import "partials/grid/_grid_tab.scss";
+@import "partials/grid/_grid_desk.scss";
+@import "partials/grid/_grid_desk_large.scss";
+
+/* ------------------------------------------------------ Content */
+
+@import "partials/content/content.scss";
+@import "partials/content/content_tab.scss";
+@import "partials/content/content_desk.scss";
+
+/* ------------------------------------------------------ Search */
+
+@import "partials/search/search.scss";
+@import "partials/search/search_mob_landscape.scss";
+@import "partials/search/search_desk.scss";
+
+/* ------------------------------------------------------ Large screen menu */
+
+@import "partials/large_screen_menu/large_screen_menu_desk.scss";
+@import "partials/large_screen_menu/large_screen_menu_desk_large.scss";
+
+/* ------------------------------------------------------ Buttons */
+
+@import "partials/buttons/buttons.scss";
+@import "partials/buttons/buttons_tab.scss";
+
+/* ------------------------------------------------------ add.This */
+
+@import "partials/addthis.scss";
+
+/* ------------------------------------------------------ Pagination */
+
+@import "partials/pagination.scss";
+
+/* ------------------------------------------------------ Contact Form */
+
+@import "partials/contact_form.scss";
+
+/* ------------------------------------------------------ Styles */
+
+@import "partials/styles/_styles.scss";
+@import "partials/styles/styles_mob_landscape.scss";
+@import "partials/styles/styles_tab.scss";
+@import "partials/styles/styles_desk.scss";
+@import "partials/styles/styles_desk_large.scss";

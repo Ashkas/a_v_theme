@@ -1,0 +1,40 @@
+.fr-thumbnail img {
+	position: absolute;
+	filter: alpha(opacity=85);
+	opacity: .85;
+	max-width: none;
+	@include box-shadow(0px,1px,0px);
+}
+
+.fr-window-fresco .fr-thumbnail-wrapper { 
+	box-shadow: -1px, -1px, 1px rgba(150, 150, 150, 0.9); 
+}
+
+.fr-window-fresco .fr-thumbnail-wrapper { 
+	box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+	left: u((2rem/16));
+	top: u((2rem/16));
+}
+
+.fr-window-fresco .fr-thumbnail-active .fr-thumbnail-wrapper {
+	box-shadow: 0 0 1px rgba(0, 0, 0, .1);
+}
+
+.fr-window-fresco .fr-thumbnail-wrapper {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, .3);
+}
+
+.fr-window-fresco .fr-thumbnail-overlay-border {
+  border-width: 2px !important;
+  border-color: rgba(255, 255, 255, .25) !important; /* should remain rgba */
+  
+  &:hover, &:focus {
+	  border-color: rgba(255, 255, 255, .5) !important; /* should remain rgba */
+  }
+}
+
+/* no inner border on active thumbnail */
+.fr-thumbnail-active .fr-thumbnail-overlay-border,
+.fr-thumbnail-active:hover .fr-thumbnail-overlay-border, .fr-thumbnail-active:focus .fr-thumbnail-overlay-border  {
+	border: 2px solid rgba(255, 255, 255, 0.05) !important; 
+}

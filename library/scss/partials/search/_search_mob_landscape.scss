@@ -1,0 +1,39 @@
+.header_search {
+	@include transition(all, .3s, ease);
+	height: u((40rem/16));
+	cursor: pointer;
+	
+	.icon-search {
+		
+		&:before {
+			content: "";
+		}
+		
+		&:after {
+			content: "\e619";
+		}
+	}
+	
+	.seach_label_text {
+		text-align: left;
+		float: left;
+		font-weight: 700;
+		font-family: $altFont;
+		@include font-size(16);
+		@include line-height(40);
+		margin-right: u((5rem/16));
+	}
+	
+	.icon-search {
+		float: right;
+		width: auto;
+	}
+}
+
+.active { 
+
+	.icon-search, .seach_label_text {
+		background: white;
+		color: $green;
+	}
+}

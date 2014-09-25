@@ -1,0 +1,22 @@
+/* ------------------------------------------------------ Header */
+
+.site_header {
+	
+	.mob_1 {
+		width: 100%*(65/320); /* one columns */
+	}
+	
+	.mob_2 {
+		width: 100%*(150/320); /* Two columns */
+	}
+}
+
+/* ------------------------------------------------------ CUSTOMISATION of flexslider */
+
+.flexslider {
+	
+	.flex-direction-nav {
+		
+		top: 40%;
+	}
+}

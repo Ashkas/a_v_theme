@@ -1,0 +1,53 @@
+/* ------------------------------------------------------ Clears */
+
+.desk_clearfix {
+	*zoom: 1;
+}
+.desk_clearfix:before,
+.desk_clearfix:after {
+	display: table;
+	content: "";
+}
+.desk_clearfix:after {
+  clear: both;
+}
+
+.tab_clearfix:after {
+  clear: none;
+}
+
+.desk_clearfix {
+	*zoom: 1;
+}
+
+.desk_clearfix:before,
+.desk_clearfix:after {
+	display: table;
+	content: "";
+}
+
+.desk_clearfix:after {
+  clear: both;
+}
+
+/* ------------------------------------------------------ Display */
+.small_device, .tablet_device {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.desktop_device {
+	display: block !important;
+	visibility: visible !important;
+}
+
+.desktop_device_inline {
+	display: inline-block !important;
+	visibility: visible !important;
+}
+
+/* ------------------------------------------------------ Alignment */
+
+.large_align_right {
+	float: right !important;
+}

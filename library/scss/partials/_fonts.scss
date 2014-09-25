@@ -1,0 +1,109 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?-q5pxwa');
+	src:url('../fonts/icomoon.eot?#iefix-q5pxwa') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-q5pxwa') format('woff'),
+		url('../fonts/icomoon.ttf?-q5pxwa') format('truetype'),
+		url('../fonts/icomoon.svg?-q5pxwa#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"], a.flex-prev, a.flex-next {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+	content: "\e600";
+}
+.icon-directions:before {
+	content: "\e601";
+}
+.icon-mail:before {
+	content: "\e602";
+}
+.icon-pencil:before {
+	content: "\e603";
+}
+.icon-paperclip:before {
+	content: "\e604";
+}
+.icon-export:before {
+	content: "\e605";
+}
+.icon-location:before {
+	content: "\e606";
+}
+.icon-star:before {
+	content: "\e607";
+}
+.icon-comment:before {
+	content: "\e608";
+}
+.icon-house:before {
+	content: "\e609";
+}
+.icon-search:before {
+	content: "\e619";
+}
+.icon-camera:before {
+	content: "\e61a";
+}
+.icon-bolt:before {
+	content: "\e60a";
+}
+.icon-network:before {
+	content: "\e60b";
+}
+.icon-rss:before {
+	content: "\e60c";
+}
+.icon-checkmark:before {
+	content: "\e60d";
+}
+.icon-info:before {
+	content: "\e60e";
+}
+.icon-help:before {
+	content: "\e60f";
+}
+.icon-list:before {
+	content: "\e610";
+}
+.icon-pictures:before {
+	content: "\e611";
+}
+.icon-video:before {
+	content: "\e612";
+}
+.icon-install:before {
+	content: "\e613";
+}
+.icon-bookmark:before {
+	content: "\e614";
+}
+.icon-arrow-down:before {
+	content: "\e61b";
+}
+.icon-arrow-left:before, a.flex-prev:before {
+	content: "\e615";
+}
+.icon-arrow-right:before, a.flex-next:before {
+	content: "\e616";
+}
+.icon-twitter:before {
+	content: "\e617";
+}
+.icon-facebook:before {
+	content: "\e618";
+}

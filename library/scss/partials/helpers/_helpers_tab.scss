@@ -1,0 +1,73 @@
+/* ------------------------------------------------------ Clears */
+
+.mobile_clearfix:before, .mobile_clearfix:after {
+	display: inherit;
+}
+.mobile_clearfix:after {
+  clear: none;
+}
+
+.tab_clearfix {
+	*zoom: 1;
+}
+.tab_clearfix:before,
+.tab_clearfix:after {
+	display: table;
+	content: "";
+}
+.tab_clearfix:after {
+  clear: both;
+}
+
+/* ------------------------------------------------------ Display */
+
+.large_device, .tablet_device {
+	display: block !important;
+	visibility: visible !important;
+}
+
+.small_device, .small_device_inline {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+.mobile_single_block {
+	margin-bottom: 0px !important;
+}
+
+.large_device_inline {
+	display: inline-block !important;
+	visibility: visible !important;
+}
+
+/* ------------------------------------------------------ Padding */
+
+.large_padding_sides {
+	
+	padding: u(0px (20rem/16) 0px (20rem/16))
+}
+
+/* ------------------------------------------------------ Margin */
+
+.double_single_block {
+	margin-bottom: u((40rem/16)) !important;
+}
+
+.double_margin_top {
+	margin-top:((40rem/16));
+}
+
+/* ------------------------------------------------------ Alignment */
+.large_float_right {
+	float: right !important;
+}
+
+.large_float_left {
+	float: left !important;
+}
+
+/* ------------------------------------------------------ Text */
+
+.large_right_text {
+	text-align: right !important;
+}

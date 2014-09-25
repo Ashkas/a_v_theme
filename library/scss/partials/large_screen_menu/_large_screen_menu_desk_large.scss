@@ -1,0 +1,19 @@
+.nav_primary {
+	
+	min-height: u((73rem/16));
+	
+	ul {
+		
+		li {
+			font-family: $altFont;
+			@include font-size(16);
+			@include line-height(73);
+			padding-right: u((10rem/16));
+			padding-left: u((10rem/16));
+		}
+	}
+	
+	a {
+		height: u((73rem/16));
+	}
+}

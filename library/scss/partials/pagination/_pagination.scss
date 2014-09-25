@@ -1,0 +1,82 @@
+/* ------------------------------------------------------ Pagination */
+
+.pagination {
+
+	font-family: $altFont;
+	text-transform: uppercase;
+	@include line-height(30);
+	height: u((30rem/16));
+	text-align: center;
+	border-bottom: 1px solid $lightgrey;
+	padding-bottom: u((20rem/16));
+	margin-bottom: u((20rem/16));
+	border-top: 1px solid $lightgrey;
+	padding-top: u((10rem/16));
+	margin-top: u((20rem/16));
+	
+	.nav_text {
+		vertical-align: top;
+		@include line-height(28);
+	}
+	
+	span {
+		@include font-size(18);
+	}
+	
+	[class^="icon-"], [class*=" icon-"] {
+		
+		@include font-size(30);
+		vertical-align: sub;
+		height: u((22rem/16));
+		display: inline-block;
+	}
+	
+	a:link, a:visited {
+		color: $green;
+		
+		[class^="icon-"], [class*=" icon-"] {
+			color: $green;
+		}
+	}
+	
+	a:hover, a:focus {
+		color: $orange;
+		text-decoration: none;
+		
+		[class^="icon-"], [class*=" icon-"] {
+			color: $orange;
+		}
+	}
+	
+	.inactive {
+		margin-right: u((20rem/16));
+	}
+	
+	.current {
+		margin-right: u((20rem/16));
+		color: white;
+		background: $green;
+		border-radius: 40px;
+		padding-right: u((6rem/16));
+		padding-left: u((6rem/16));
+		display: inline-block;
+		width: u((18rem/16));
+		//padding-bottom: u((3rem/16));
+	}
+	
+	.pagination_arrows {
+		display: inline-block;
+		margin-right: u((5rem/16));
+		vertical-align: middle;
+		width: u((30rem/16));
+		text-align: center;
+	}
+	
+	.previous {
+		float: left;
+	}
+	
+	.next {
+		float: right;
+	}
+}
