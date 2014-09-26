@@ -7,11 +7,13 @@
 // Global variables
 $home_url = home_url();
 $template_directory = get_bloginfo( 'template_directory' );
+$site_title = get_bloginfo();
 $is_home = is_home();
 
 // ACF variables
-$phone = get_field('phone_number', 'option');
-$social = get_field('social_media', 'option');
+if(function_exists('get_field')) {
+	$social = get_field('social_media', 'option');
+}
 ?>
 
 <!doctype html>  
@@ -39,7 +41,7 @@ $social = get_field('social_media', 'option');
 	
 		// Add a page number if necessary:
 		if ( $paged >= 2 || $page >= 2 )
-			echo ' | ' . sprintf( __( 'Page %s', 'twentyeleven' ), max( $paged, $page ) );	?>
+			echo ' | ' . sprintf( __( 'Page %s', 'a_v_theme' ), max( $paged, $page ) );	?>
 	</title>
 	
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -97,11 +99,6 @@ $social = get_field('social_media', 'option');
 						<?php
 							if($social):
 								echo '<div class="large_device_inline">'.$social.'</div>';
-								echo '<small class="desktop_device_inline newsletter"><a href="http://skattle.org.au/about/newsletter/" title="Join the SKATTLE newsletter">Newsletter</a></small>';
-							endif;
-							
-							if($phone):
-								echo '<small class="large_device_inline right_text float_right">PH: '.$phone.'</small>';
 							endif;
 						?>
 					</div>
@@ -115,13 +112,13 @@ $social = get_field('social_media', 'option');
 					</nav>
 					
 					<div class="mob_2 mob_col_gutter tab_2 tab_col_gutter desk_2 desk_large_3 desk_col_gutter banner">
-						<a href="<?php echo $home_url; ?>" title="Return to Skattle home">
+						<a href="<?php echo $home_url; ?>" title="Return to home">
 							<figure>
-								<!--[if lte IE 8]><img src="<?php echo $template_directory; ?>/library/images/logo_web_hori.png" alt="Skattle"/><![endif]-->	
-								<img src="<?php echo $template_directory; ?>/library/images/logo_web_hori.svg" alt="Skattle"/>
+								<!--[if lte IE 8]><img src="<?php echo $template_directory; ?>/library/images/logo_web_hori.png" alt="<?php echo $site_title; ?>"/><![endif]-->	
+								<img src="<?php echo $template_directory; ?>/library/images/logo_web_hori.svg" alt="<?php echo $site_title; ?>"/>
 							</figure>
 							<h1 class="banner_title">
-								Skattle
+								<?php echo $site_title; ?>
 							</h1>
 						</a>
 					</div> <!-- desk_4 desk_large_6  -->
@@ -141,7 +138,7 @@ $social = get_field('social_media', 'option');
 					<div class="sb-search" id="sb-search">
 						<form method="get" class="search_form" action="<?php echo trailingslashit( home_url() ); ?>">
 							<input class="sb-search-input" id="search" type="search" name="s" value="<?php echo sanitize_text_field($_GET['q']); ?>" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
-							<input class="sb-search-submit" name="submit" type="submit" value="<?php esc_attr_e( 'Search', 'skattle' ); ?>" />
+							<input class="sb-search-submit" name="submit" type="submit" value="<?php esc_attr_e( 'Search', 'a_v_theme' ); ?>" />
 						</form><!-- .search_form -->
 					</div>
 					

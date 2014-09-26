@@ -12,105 +12,58 @@ $expire = 60 * 60 * 168; // 168 hours
 $group = 'home'; ?>
 
 	<section role="main" id="page">
-		<?php $slides = get_field('home_slides', 'option'); 
+		<?php 
+		
+		if(function_exists('get_field')) {
+			$slides = get_field('home_slides', 'option'); 
+		}
 			
 		if($slides):?>
 			<div class="flexslider home_slider loading large_block margin_auto">
 				<ul class="slides">
-					<?php while ( has_sub_field('home_slides', 'option' )) :
-						$text = get_sub_field('slide_text');
-						$image_id = get_sub_field('image');
-						$image = wp_get_attachment_image_src($image_id, 'large-24x1');
-						$action_text = 	get_sub_field('action_text');		
-						$action_link = get_sub_field('link'); 		
-						
-						if($image) : ?>
-							<li>
-								<article>
-									<figure class="slide_image">
-										<img src="<?php echo $image[0]; ?>" alt="<?php echo $title; ?>"/>
-									</figure>
-									<div class="slide_text_box large_device">
-										<div class="slide_text">
-											<?php if($text): ?>
-												<p><?php echo $text; ?></p>
-											<?php endif; ?>
+					<?php if(function_exists('has_sub_field')) :
+						while ( has_sub_field('home_slides', 'option' )) :
+							if(function_exists('get_sub_field')) {
+								$text = get_sub_field('slide_text');
+								$image_id = get_sub_field('image');
+								$image = wp_get_attachment_image_src($image_id, 'large-24x1');
+								$action_text = 	get_sub_field('action_text');		
+								$action_link = get_sub_field('link'); 		
+							}
+							if($image) : ?>
+								<li>
+									<article>
+										<figure class="slide_image">
+											<img src="<?php echo $image[0]; ?>" alt="<?php echo $title; ?>"/>
+										</figure>
+										<div class="slide_text_box large_device">
+											<div class="slide_text">
+												<?php if($text): ?>
+													<p><?php echo $text; ?></p>
+												<?php endif; ?>
+											</div>
 										</div>
-									</div>
-									<?php if($action_text && $action_link): ?>
-										<a href="<?php echo $action_link; ?>" title="<?php echo $action_text; ?>" class="centre_float button">
-											<?php echo $action_text; ?>
-										</a>
-									<?php endif; ?>
-								</article>
-							</li>
-						<?php endif;
-					endwhile; wp_reset_postdata();?>
+										<?php if($action_text && $action_link): ?>
+											<a href="<?php echo $action_link; ?>" title="<?php echo $action_text; ?>" class="centre_float button">
+												<?php echo $action_text; ?>
+											</a>
+										<?php endif; ?>
+									</article>
+								</li>
+							<?php endif;
+						endwhile; 
+					endif;
+					wp_reset_postdata();?>
 	             </ul>
 			</div>
 		<?php endif; ?>
 		<div class="main">
 			<div class="main_content">
-				<div class="padding_block large_block">
-					<?php 
-					
-					if( have_rows('home_action_buttons', 'options') ):
-						
-					 	echo '<div class="grid_buttons_alt">';
-					 	
-						 	// loop through the rows of data
-						    while ( have_rows('home_action_buttons', 'options') ) : the_row();
-						    	
-						    	$the_title = get_sub_field('text');
-						    	$get_permalink = get_sub_field('link');
-						    	$icons = get_sub_field('icons');
-						    						    	
-						    	if( strpos( $icons, 'star' ) !== false ) {
-							    	$icon = '<span class="icon-star"></span>';
-						    	}
-						    	
-						    	if( strpos( $icons, 'pencil' ) !== false ) {
-							    	$icon = '<span class="icon-pencil"></span>';
-						    	}
-						    	
-						    	if( strpos( $icons, 'info' ) !== false ) {
-							    	$icon = '<span class="icon-info"></span>';
-						    	}
-						    	
-						    	if( strpos( $icons, 'help' ) !== false ) {
-							    	$icon = '<span class="icon-help"></span>';
-						    	}
-						    	
-						    	if( strpos( $icons, 'bolt' ) !== false ) {
-							    	$icon = '<span class="icon-bolt"></span>';
-							    	
-						    	}
-						    	
-						    	if( strpos( $icons, 'pictures' ) !== false ) {
-							    	$icon = '<span class="icon-pictures"></span>';
-							    	
-						    	}
-						    	if( strpos( $icons, 'video' ) !== false ) {
-							    	$icon = '<span class="icon-video"></span>';
-							    	
-						    	}
-						    	 ?>
-						    	
-						    	<a href="<?php echo $get_permalink; ?>" title="Find out about <?php echo $the_title; ?>" class="grid_item services">		
-									<h3><?php echo $icon.' '.$the_title; ?></h3>
-								</a>
-								
-							    <?php unset($icon, $icons);
-							    
-							endwhile;
-						echo '</div>';
-					endif; ?>
-				</div> <!-- large_block -->
 				
-				<div class="content_styles">
+				<div class="content">
 					<section class="desk_6 desk_large_8 margin_auto module block">
 						<header class="padding_block large_block">
-							<h1 class="centre_text"><a href="<?php echo $home_url; ?>/blog" title="Articles by Skattle" class="alt">Latest Articles</a></h1>
+							<h1 class="centre_text"><a href="<?php echo $home_url; ?>/blog" title="Latest Articles" class="alt">Latest Articles</a></h1>
 						</header>
 						<div class="large_outline_right">
 							<?php 

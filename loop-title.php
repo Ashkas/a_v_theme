@@ -8,8 +8,10 @@
 
 
 // ACF Variables
-$gallery = get_field('image_gallery');
-$video = get_field('video_embed');
+if(function_exists('get_field')) {
+	$gallery = get_field('image_gallery');
+	$video = get_field('video_embed');
+}
 
 //Check the image size to ensure it is large.
 // Update this number from 2160 if the image size for large-16x9 changes in functions.php.

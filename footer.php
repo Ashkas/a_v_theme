@@ -11,13 +11,14 @@ $home_url = home_url();
 	<div class="footer_top">
 		<div class="footer_content">
 			<?php
-				$social = get_field('social_media', 'option');
+				if(function_exists('get_field')) {
+					$social = get_field('social_media', 'option');
+				}
 				
 				if($social):
 					echo $social;
 				endif;
 			?>
-			<small class="desktop_device_inline newsletter"><a href="http://skattle.org.au/about/newsletter/" title="Join SKATTLE's newsletter">Newsletter</a></small>
 			<div class="clearfix"></div>
 		</div> <!-- footer_content -->
 	</div> <!-- footer_top -->
@@ -25,7 +26,6 @@ $home_url = home_url();
 	<div class="footer_content">
 		
 		<nav class="mob_2 tab_3 desk_2 desk_large_3 mob_col_gutter desk_col_gutter block"> 
-			<h2 class="alt"><a href="<?php echo $home_url; ?>/counselling" title="Skattle Counselling Services" class="alt">Counselling</a></h2>  
 			<?php
 			$nav_args = array(
 				'theme_location'  => 'footer_menu_1',
@@ -55,8 +55,7 @@ $home_url = home_url();
 			<?php } ?> 
 		</nav>
 		
-		<nav class="mob_2 tab_3 desk_2 desk_large_3 desk_col_gutter block">     
-			<h2 class="alt"><a href="<?php echo $home_url; ?>/professional-development" title="Skattle Training Servers" class="alt">Professionals</a></h2>   
+		<nav class="mob_2 tab_3 desk_2 desk_large_3 desk_col_gutter block">       
 			<?php
 			$nav_args = array(
 				'theme_location'  => 'footer_menu_2',
@@ -88,8 +87,7 @@ $home_url = home_url();
 		
 		<div class="mobile_clearfix"></div>
 		
-		<nav class="mob_2 tab_3 desk_2 desk_large_3 mob_col_gutter desk_col_gutter block">    
-			<h2 class="alt"><a href="<?php echo $home_url; ?>/category/blog" title="Skattle Blog" class="alt">Blog</a></h2>   
+		<nav class="mob_2 tab_3 desk_2 desk_large_3 mob_col_gutter desk_col_gutter block">       
 			<?php
 			$nav_args = array(
 				'theme_location'  => 'footer_menu_3',
@@ -119,8 +117,7 @@ $home_url = home_url();
 			<?php } ?> 
 		</nav>
 		
-		<nav class="mob_2 tab_3 desk_2 desk_large_3 block">     
-			<h2 class="alt"><a href="<?php echo $home_url; ?>/about" title="About Skattle" class="alt">About</a></h2>    
+		<nav class="mob_2 tab_3 desk_2 desk_large_3 block">       
 			<?php
 			$nav_args = array(
 				'theme_location'  => 'footer_menu_4',
@@ -155,7 +152,9 @@ $home_url = home_url();
 	</div> <!-- footer_content -->
 	
 	<?php //ALlow for shortcodes in the footer site info ACF field
-	$site_info = get_field('site_info', 'option');
+	if(function_exists('get_field')) {
+		$site_info = get_field('site_info', 'option');
+	}
 	
 	if ($site_info) : ?>
 		<div class="footer_bottom">
@@ -464,55 +463,4 @@ function showArchive() {
 		</script>
 	<?php endif; // if has featured image
 
-endif; // is_single
-	
-if(is_page()):
-	// Script to show/hide fields in contact form depending on selections ?>
-	<script>
-		jQuery(document).ready(function($) {
-			//Hide the field initially
-	        jQuery("#pro-dev-services").hide();
-	        jQuery("#counselling-services").hide();
-			
-			// If Pro Dev
-			jQuery("input[value='Professional Development']").change(function(e){
-				if($(this).val() == 'Professional Development') {
-				    jQuery("#pro-dev-services").show();
-				    jQuery("#counselling-services").hide();
-				}
-			});
-			
-			// If Counselling
-	        jQuery("input[value='Counselling']").change(function(e){
-				if($(this).val() == 'Counselling') {
-					jQuery("#counselling-services").show();
-				    jQuery("#pro-dev-services").hide();				    
-				}
-			});
-			
-			// if General
-			jQuery("input[value='General enquiry']").change(function(e){
-				if($(this).val() == 'General enquiry') {
-				    jQuery("#pro-dev-services").hide();
-				    jQuery("#counselling-services").hide();
-				}
-			});
-		});
-	</script>
-<?php endif; //Contact us ?>
-
-<!-- Typekit -->
-<script type="text/javascript" src="//use.typekit.net/moe3esx.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
-<!-- Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-33447908-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+endif; // is_single ?>

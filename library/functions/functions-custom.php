@@ -69,8 +69,10 @@ if(function_exists('acf_add_options_page')) {
 
 function video_embed_func(){
 	global $post;
-	$video = '<div class="embed_container">'.get_field( 'video_embed', $post->ID ).'</div>';
-	return $video;
+	
+		$video = '<div class="embed_container">'.get_field( 'video_embed', $post->ID ).'</div>';
+		return $video;
+	}
 }
 add_shortcode( 'video_embed', 'video_embed_func' );
 
@@ -249,8 +251,11 @@ class Short_Name_Walker extends Walker_Page {
     }
     function start_el(&$output, $page, $depth, $args, $current_page) {
         //Get the short_title if it is there
-        if(get_field('short_title', $page->ID)) : 
-			$title = get_field('short_title', $page->ID); 
+        if(function_exists('get_field')) {
+        	$short_title = get_field('short_title', $page->ID);
+        }
+        if($short_title) : 
+			$title = $short_title; 
 		else: 
 			$title = $page->post_title;
 		endif;
@@ -372,7 +377,10 @@ function add_incontent_related_articles_pages($content) {
 		global $post;
 		
 		// Insert related articles
-		$articles = get_field('related_articles', $post->ID);
+		if(function_exists('get_field')) {
+			$articles = get_field('related_articles', $post->ID);
+		}
+		
 		if( $articles ): 
 			foreach( $articles as $article ): // variable must NOT be called $post (IMPORTANT)
 			    $article_list .= '<li><a href="'.get_permalink( $article ).'">'.get_the_title($article).'</a></li>';
@@ -380,14 +388,22 @@ function add_incontent_related_articles_pages($content) {
 		endif;
 		
 		// Insert related page/service
-		$pages = get_field('related_pages', $post->ID);
+		if(function_exists('get_field')) {
+			$pages = get_field('related_pages', $post->ID);
+		}
+		
 		if( $pages ): 
 			foreach( $pages as $page ): // variable must NOT be called $post (IMPORTANT)
-				if(get_field('short_title', $page)):
-					$the_title = get_field('short_title', $page);
-				else:
-					$the_title = get_the_title($page);
+				 //Get the short_title if it is there
+		        if(function_exists('get_field')) {
+		        	$short_title = get_field('short_title', $page->ID);
+		        }
+		        if($short_title) : 
+					$title = $short_title; 
+				else: 
+					$title = $page->post_title;
 				endif;
+				
 			    $page_button .= '<a href="'.get_permalink( $page ).'" class="button big_button"><span class="button_text">'.$the_title.'</span></a>';
 			endforeach;
 		endif;
@@ -413,10 +429,12 @@ function add_incontent_related_articles_pages($content) {
 	
 	if(is_page()){
 		global $post;
-				
-		$contact = get_field('contact_action_box', $post->ID);
-		$date_box = get_field('date_box');
-		$price_box = get_field('price_box');
+		
+		if(function_exists('get_field')) {
+			$contact = get_field('contact_action_box', $post->ID);
+			$date_box = get_field('date_box');
+			$price_box = get_field('price_box');
+		}
 		
 		
 		if(in_array( 'true', $contact) && !($date_box || $price_box)):
@@ -527,33 +545,18 @@ function custom_category_name( $id, $taxonomy, $exclude = array(1)) {
 		if ($term->parent != 0) {		// if there is a child, find it
 			$child_term = $term;		// get the child term...
 			
-			if (get_field('singular_name', $taxonomy . '_'. $term->term_id)) {
-				//Get the name of category set by ACF
-				$child_name = get_field('singular_name', $taxonomy . '_'. $term->term_id); 
-			} else {
-				//if the acf field is not set, default back to the category name
-				$child_name = $term->name;
-			}
+			//child name
+			$child_name = $term->name;
 			
+			// parent_name
 			$parent_term = get_term_by('id', $term->parent, $taxonomy);		// ... and the parent term
-			if (get_field('singular_name', $taxonomy . '_'. $term->term_id)) {
-				//Get the name of category set by ACF
-				$parent_name = get_field('singular_name', $taxonomy . '_'. $parent_term->term_id); 
-			} else {
-				//if the acf field is not set, default back to the category name
-				$parent_name = $parent_term->name;
-			}
+			$parent_name = $parent_term->name;
 			
 			break;
 			
-		}elseif ($term->parent = 1) { //if there is no parent/child relationship, just do the parent_term
+		} elseif ($term->parent = 1) { //if there is no parent/child relationship, just do the parent_term
 		
-			$single_term = $term;		// get the child term...
-			$single_name = get_field('singular_name', $taxonomy . '_'. $parent_term->term_id); //Get the name of category set by ACF
-			// If nothing is set in the ACF field, defaut back to the default back to the default category name
-			if (empty($single_name)) {
-				$single_name = $parent_term->name;
-			}
+			$single_name = $parent_term->name;
 		}
 	}
 

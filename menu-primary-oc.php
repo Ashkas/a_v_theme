@@ -9,8 +9,9 @@
 if ( has_nav_menu( 'primary-oc' ) ) : 
 
 // ACF variable
-$social = get_field('social_media', 'option');?>
-
+if(function_exists('get_field')) {
+	$social = get_field('social_media', 'option');
+}?>
 	<nav id="menu" class="menu-link oc" role="navigation" style="display: none;">
     	<?php wp_nav_menu( array( 'theme_location' => 'primary-oc', 'container' => 'false',  'menu_class' => 'oc_menu', 'depth' => 1) );
     	
@@ -18,5 +19,4 @@ $social = get_field('social_media', 'option');?>
 			echo '<div class="inline_block">'.$social.'</div>';
 		endif; ?>
 	</nav>
-
 <?php endif; ?>

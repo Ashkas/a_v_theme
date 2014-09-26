@@ -30,7 +30,9 @@ if($featured_image) :
 endif; 
 
 // ACF variables
-$gallery = get_field('image_gallery');
+if(function_exists('get_field')) {
+	$gallery = get_field('image_gallery');
+}
 
 if ( have_posts() ) : while ( have_posts() ) : the_post(); $do_not_duplicate[] = $post->ID; ?>
 
