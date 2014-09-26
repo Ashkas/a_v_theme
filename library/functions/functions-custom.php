@@ -58,12 +58,10 @@ function search_nav() {
 /* Change the ACF options page name to Global */
 
 if(function_exists('acf_add_options_page')) { 
- 
 	acf_add_options_page();
 	acf_add_options_sub_page('Homepage');
 	acf_add_options_sub_page('General');
 	acf_add_options_sub_page('Footer');
- 
 }
 
 
@@ -151,7 +149,7 @@ function read_time() {
 	}
 }
 
-// Get just the bottom level category, by adding array 1, we're excluding the uncategorized category (don't need to for Skattle, no uncategorized)
+// Get just the bottom level category, by adding array 1, we're excluding the uncategorized category
 function custom_category( $id, $taxonomy, $exclude = array()) {
 	
 	// if no taxonomy then it is a default category
@@ -197,13 +195,13 @@ function custom_category( $id, $taxonomy, $exclude = array()) {
 			// remove categories from the URL and replace with category
 			$link = get_term_link($child_term, $taxonomy);
 			
-			echo '<a href="'.$link.'" rel="tag" class="category_link alt_2" title="See all stories from '.$child_name.' on Japan Camera Hunter">'.$child_name.'</a>';
+			echo '<a href="'.$link.'" rel="tag" class="category_link alt_2" title="See all stories from '.$child_name.'">'.$child_name.'</a>';
 		}
 	// if no sub-category is connected, just show the single parent category
 		if (isset($single_name) && !isset($parent_name)) {
 			$link = get_term_link($parent_term, $taxonomy);
 			
-			echo '<a href="'.$link.'" rel="tag" class="category_link alt_2" title="See all stories from '.$single_name.' on Japan Camera Hunter">'.$single_name.'</a>';
+			echo '<a href="'.$link.'" rel="tag" class="category_link alt_2" title="See all stories from '.$single_name.'">'.$single_name.'</a>';
 		}
 }
 
