@@ -305,7 +305,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); $do_not_duplicate[] =
 		
 		<section>
 			<header class="padding_block single_block">
-				<h1 class="alt">Latest articles from Skattle</h1>
+				<h1 class="alt">Latest articles</h1>
 			</header>
 			<?php $args = array(
 				'posts_per_page' => 12,
