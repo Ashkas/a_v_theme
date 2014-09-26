@@ -1,0 +1,22 @@
+// This file covers basic settings that are constants throughout the stylesheet. THings like colours, margins, paddings extra. If you have a set size, it means you can change the value in one place for it to be used elsewhere.
+
+/* ------------------------------------------------------ Colours */
+ 
+$orange: #F16347;
+$green: #3F8F21;
+$brown: #521D18;
+$lightred: #f7c0c0;
+$blue: #0099CC;
+//$blue: #00224f;
+$black: #000;
+$darkgrey: #333333;
+$midgrey: #666666;
+$lightgrey: #ccc;
+$verylightgrey: #efefef;
+$white: #F9F9F9;
+
+/* ------------------------------------------------------ Margins */
+
+$small_margin: (10rem/16);
+$margin: (20rem/16);
+$large_margin: (20rem/16);

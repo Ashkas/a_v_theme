@@ -49,18 +49,30 @@
 	padding-bottom: u((40rem/16));
 }
 
-/* ------------------------------------------------------ Margin */
+/* ------------------------------------------------------ Margins */
 
 .margin_bottom {
-	margin-bottom: u((20rem/16));
+	margin-bottom: u($margin);
+}
+
+.small_margin_bottom {
+	margin-bottom: u($small_margin);
+}
+
+.large_margin_bottom {
+	margin-bottom: u($large_margin);
 }
 
 .margin_top {
-	margin-top: u((20rem/16)) !important;
+	margin-top: u($margin);
 }
 
 .small_margin_top {
-	margin-top: u((10rem/16)) !important;
+	margin-top: u($small_margin);
+}
+
+.large_margin_top {
+	margin-top: u($large_margin);
 }
 
 .margin_auto {
@@ -73,15 +85,15 @@
 }
 
 .single_block, .double_single_block, .mobile_single_block {
-	margin-bottom: u((20rem/16)) !important;
+	@extend .margin_bottom;
 }
 
 .large_single_block {
-	margin-bottom: u((40rem/16));
+	@extend .large_margin_bottom;
 }
 
 .small_block {
-	margin-bottom: u((10rem/16))  !important;
+	@extend .small_margin_bottom;
 }
 
 /* ------------------------------------------------------ Borders */
