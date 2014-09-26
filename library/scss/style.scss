@@ -119,16 +119,6 @@ $bodyFont: "ff-ernestine-web-pro", Georgia, serif;
 	@import "partials/typography/typography_desk.scss";
 }
 
-/* ------------------------------------------------------ Offcanvas */
-
-@import "partials/offcanvas/offcanvas.scss";
-
-/* 980 */
-@media (min-width: 61.25em) {
-	
-	@import "partials/offcanvas/offcanvas_desk.scss";
-}
-
 /* ------------------------------------------------------ Inputs */
 
 @import "partials/inputs.scss";
@@ -217,6 +207,19 @@ $bodyFont: "ff-ernestine-web-pro", Georgia, serif;
 /* ------------------------------------------------------ Contact Form */
 
 @import "partials/contact_form_7.scss";
+
+/* ------------------------------------------------------ Mobile Menu */
+
+/* 980 */
+@media (max-width: 61.249em) {
+	@import "partials/offcanvas/offcanvas.scss";
+}
+
+/* 980 */
+@media (min-width: 61.25em) {
+	
+	@import "partials/offcanvas/offcanvas_desk.scss";
+}
 
 /* ------------------------------------------------------ Large screen menu */
 
