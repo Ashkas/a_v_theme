@@ -112,22 +112,23 @@ dl {
 	margin: u(0px 0px (10rem/16) 0px);
 }
 
-
 ul, ol {
-	
-	padding: u(0px 0px (10rem/16) 0px);
 	margin: 0px;
-	
-	li {
-		list-style-position: inside;
+	padding: 0px;
+}
+
+.content {
+
+	ul, ol {
+		
+		padding: u(0px 0px (10rem/16) 0px);
+		margin: 0px;
 	}
 }
 
 time {
 	font-family: $titleFont;
-	//line-height: 1.11111;
 	@include font-size(14);
-	//font-style: italic;
 }
 
 h1 {
