@@ -69,7 +69,7 @@ if(function_exists('acf_add_options_page')) {
 
 function video_embed_func(){
 	global $post;
-	
+	if(function_exists('get_field')) {
 		$video = '<div class="embed_container">'.get_field( 'video_embed', $post->ID ).'</div>';
 		return $video;
 	}
