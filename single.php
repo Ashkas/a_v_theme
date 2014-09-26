@@ -99,7 +99,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); $do_not_duplicate[] =
 				<div class="main_content">
 					
 					<header class="padding_block">
-						<div class="margin_auto margin_bottom tab_5 desk_6 desk_large_10">
+						<div class="margin_auto margin_bottom tab_5 desk_6 desk_large_10 content">
 							<h1 class="page_title margin_bottom"><?php the_title(); ?></h1>
 							<?php if(is_singular('post')): ?>
 							
