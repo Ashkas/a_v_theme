@@ -52,8 +52,8 @@ $group = 'page'; ?>
 				
 				// If children with images
 				if( $children == 'true_image' ): ?>
-					<section class="double_single_block">
-						<?php if($show_children_title): echo '<header class="padding_block single_block"><h1 class="alt">'.$show_children_title.'</h1></header>'; endif; ?>
+					<section class="large_block">
+						<?php if($show_children_title): echo '<header class="padding_block block"><h1 class="alt">'.$show_children_title.'</h1></header>'; endif; ?>
 						<div class="grid">
 							<?php $args = array(
 								'child_of' => $post_id,
@@ -134,8 +134,8 @@ if((!($counter == 1)) && ($counter % 2 == 0)): echo '<div class="tab_clearfix"><
 					</section>
 				<?php 
 				elseif( $children == 'true_button' ): ?>
-					<aside class="double_single_block">
-						<?php if($show_children_title): echo '<h2 class="padding_block single_block">'.$show_children_title.'</h2>'; endif; ?>
+					<aside class="large_block">
+						<?php if($show_children_title): echo '<h2 class="padding_block block">'.$show_children_title.'</h2>'; endif; ?>
 						<!-- <div class="grid"> -->
 							<?php $args = array(
 								'child_of' => $post_id,

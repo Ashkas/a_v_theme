@@ -128,7 +128,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); $do_not_duplicate[] =
 				
 				<?php if($featured_image == true) :?>
 					
-					<div class="tab_5 desk_6 desk_large_8 margin_auto single_block">
+					<div class="tab_5 desk_6 desk_large_8 margin_auto block">
 						<div class="padding_block">
 							<?php get_template_part( 'loop-social-box' ); ?>
 						</div>
@@ -139,7 +139,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); $do_not_duplicate[] =
 				get_template_part( 'loop-page' ); // Loads the loop-page.php template. ?>
 				
 				<div class="clearfix"></div>
-				<div class="padding_block single_block">
+				<div class="padding_block block">
 					<div class="tab_5 desk_6 desk_large_8 margin_auto border_bottom border_top">
 						<?php if ($tags || $gallery) : 
 							$counter = 0;
@@ -218,9 +218,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); $do_not_duplicate[] =
 	
 <?php endwhile; endif; ?>
 	<div class="main" id="page">
-	<div class="main_content double_single_block" id="content">
-		<section class="double_single_block">
-			<header class="padding_block single_block">
+	<div class="main_content large_block" id="content">
+		<section class="large_block">
+			<header class="padding_block block">
 				<h1 class="alt">More articles in <?php echo custom_category($post->ID, $taxonomy); ?></h1>
 			</header>
 			<?php $args = array(
@@ -274,7 +274,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); $do_not_duplicate[] =
 					
 					$thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium-16x9');  ?>
 					
-					<article class="tab_3 desk_2 desk_large_3 content_styles single_block <?php echo $two_row_col_gutter.' '.$four_row_col_gutter; ?>" role="article">
+					<article class="tab_3 desk_2 desk_large_3 content_styles block <?php echo $two_row_col_gutter.' '.$four_row_col_gutter; ?>" role="article">
 						<?php if (!($thumbnail == NULL)) {?>
 							<figure>
 								<img src="<?php echo $thumbnail[0]; ?>" alt="<?php the_title(); ?>"/>
@@ -304,7 +304,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); $do_not_duplicate[] =
 		</section>
 		
 		<section>
-			<header class="padding_block single_block">
+			<header class="padding_block block">
 				<h1 class="alt">Latest articles</h1>
 			</header>
 			<?php $args = array(
@@ -359,7 +359,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); $do_not_duplicate[] =
 					
 					$thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium-16x9');  ?>
 					
-					<article class="tab_2 desk_2 desk_large_3 content_styles single_block <?php echo $three_row_col_gutter.' '.$four_row_col_gutter; ?>" role="article">
+					<article class="tab_2 desk_2 desk_large_3 content_styles block <?php echo $three_row_col_gutter.' '.$four_row_col_gutter; ?>" role="article">
 						<?php if (!($thumbnail == NULL)) {?>
 							<figure>
 								<img src="<?php echo $thumbnail[0]; ?>" alt="<?php the_title(); ?>"/>

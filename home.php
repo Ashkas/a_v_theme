@@ -15,7 +15,7 @@ $group = 'home'; ?>
 		<?php $slides = get_field('home_slides', 'option'); 
 			
 		if($slides):?>
-			<div class="flexslider home_slider loading double_single_block margin_auto">
+			<div class="flexslider home_slider loading large_block margin_auto">
 				<ul class="slides">
 					<?php while ( has_sub_field('home_slides', 'option' )) :
 						$text = get_sub_field('slide_text');
@@ -51,7 +51,7 @@ $group = 'home'; ?>
 		<?php endif; ?>
 		<div class="main">
 			<div class="main_content">
-				<div class="padding_block double_single_block">
+				<div class="padding_block large_block">
 					<?php 
 					
 					if( have_rows('home_action_buttons', 'options') ):
@@ -105,11 +105,11 @@ $group = 'home'; ?>
 							endwhile;
 						echo '</div>';
 					endif; ?>
-				</div> <!-- double_single_block -->
+				</div> <!-- large_block -->
 				
 				<div class="content_styles">
-					<section class="desk_6 desk_large_8 margin_auto module single_block">
-						<header class="padding_block double_single_block">
+					<section class="desk_6 desk_large_8 margin_auto module block">
+						<header class="padding_block large_block">
 							<h1 class="centre_text"><a href="<?php echo $home_url; ?>/blog" title="Articles by Skattle" class="alt">Latest Articles</a></h1>
 						</header>
 						<div class="large_outline_right">

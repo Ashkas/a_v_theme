@@ -5,7 +5,7 @@
 */
 $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium-16x9'); 
 ?>
-	<article class="content_styles single_block archive_block" role="article">
+	<article class="content_styles block archive_block" role="article">
 		<?php if (!($thumbnail == NULL)) {?>
 			<figure>
 				<img src="<?php echo $thumbnail[0]; ?>" alt="<?php the_title(); ?>"/>

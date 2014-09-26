@@ -31,7 +31,7 @@
 	visibility: hidden !important;
 }
 
-.mobile_single_block {
+.mobile_block {
 	margin-bottom: 0px !important;
 }
 
@@ -44,17 +44,17 @@
 
 .large_padding_sides {
 	
-	padding: u(0px (20rem/16) 0px (20rem/16))
+	padding: u(0px $padding 0px $padding)
 }
 
 /* ------------------------------------------------------ Margin */
 
-.double_single_block {
-	margin-bottom: u((40rem/16)) !important;
+.large_block {
+	margin-bottom: u($large_margin) !important;
 }
 
 .double_margin_top {
-	margin-top:((40rem/16));
+	margin-top:($large_margin);
 }
 
 /* ------------------------------------------------------ Alignment */

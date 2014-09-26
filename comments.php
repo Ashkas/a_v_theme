@@ -15,12 +15,12 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div class="tab_5 desk_6 desk_large_8 margin_auto double_single_block comments" id="comments">
+<div class="tab_5 desk_6 desk_large_8 margin_auto large_block comments" id="comments">
 	<div class="padding_block">
 
 		<?php if ( have_comments() ) : ?>
 	
-		<h2 class="single_block">
+		<h2 class="block">
 			<?php
 				printf( _n( 'One commennt on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', get_comments_number(), 'jch' ),
 					number_format_i18n( get_comments_number() ), get_the_title() );
@@ -58,4 +58,4 @@ if ( post_password_required() ) {
 			)
 		); ?>
 	</div> <!-- padding_block -->
-</div> <!-- tab_4 desk_6 desk_large_8 margin_auto single_block comments -->
+</div> <!-- tab_4 desk_6 desk_large_8 margin_auto block comments -->

@@ -18,13 +18,13 @@ $term = $wp_query->queried_object;?>
 	<div class="main_content">
 		
 		<div class="padding_block">
-			<div class="tab_4 desk_6 desk_large_8 margin_auto double_single_block double_margin_top">
+			<div class="tab_4 desk_6 desk_large_8 margin_auto large_block double_margin_top">
 				<header>
-					<h1 class="page_title centre_text single_block">
+					<h1 class="page_title centre_text block">
 						Tag: <?php  echo $term->name; ?>
 					</h1>
 				</header>
-			</div> <!-- tab_4 desk_6 desk_large_8 margin_auto single_block -->
+			</div> <!-- tab_4 desk_6 desk_large_8 margin_auto block -->
 		</div> <!-- padding_block -->
 		
 		<?php

@@ -84,11 +84,11 @@
 	margin: 0px !important;
 }
 
-.single_block, .double_single_block, .mobile_single_block {
+.block, .large_block, .mobile_block {
 	@extend .margin_bottom;
 }
 
-.large_single_block {
+.large_block {
 	@extend .large_margin_bottom;
 }
 
@@ -100,20 +100,20 @@
 
 .border_bottom {
 	border-bottom: 1px solid $lightgrey;
-	padding-bottom: u((20rem/16));
-	margin-bottom: u((20rem/16));
+	padding-bottom: u($padding);
+	margin-bottom: u($margin);
 }
 
 .small_border_top {
 	border-top: 1px solid $verylightgrey;
-	padding-top: u((10rem/16));
-	margin-top: u((10rem/16));
+	padding-top: u($small_padding);
+	margin-top: u($small_margin);
 }
 
 .small_border_bottom {
 	border-bottom: 1px solid $verylightgrey;
-	padding-bottom: u((10rem/16));
-	margin-bottom: u((10rem/16));
+	padding-bottom: u($small_padding);
+	margin-bottom: u($small_margin);
 }
 
 .dotted_underline {
@@ -122,7 +122,7 @@
 
 .border_top {
 	border-top: 1px solid $lightgrey;
-	padding-top: u((20rem/16));
+	padding-top: u($padding);
 }
 
 /* ------------------------------------------------------ Alignment */

@@ -24,7 +24,7 @@ $home_url = home_url();
 	        
 	<div class="footer_content">
 		
-		<nav class="mob_2 tab_3 desk_2 desk_large_3 mob_col_gutter desk_col_gutter single_block"> 
+		<nav class="mob_2 tab_3 desk_2 desk_large_3 mob_col_gutter desk_col_gutter block"> 
 			<h2 class="alt"><a href="<?php echo $home_url; ?>/counselling" title="Skattle Counselling Services" class="alt">Counselling</a></h2>  
 			<?php
 			$nav_args = array(
@@ -55,7 +55,7 @@ $home_url = home_url();
 			<?php } ?> 
 		</nav>
 		
-		<nav class="mob_2 tab_3 desk_2 desk_large_3 desk_col_gutter single_block">     
+		<nav class="mob_2 tab_3 desk_2 desk_large_3 desk_col_gutter block">     
 			<h2 class="alt"><a href="<?php echo $home_url; ?>/professional-development" title="Skattle Training Servers" class="alt">Professionals</a></h2>   
 			<?php
 			$nav_args = array(
@@ -88,7 +88,7 @@ $home_url = home_url();
 		
 		<div class="mobile_clearfix"></div>
 		
-		<nav class="mob_2 tab_3 desk_2 desk_large_3 mob_col_gutter desk_col_gutter single_block">    
+		<nav class="mob_2 tab_3 desk_2 desk_large_3 mob_col_gutter desk_col_gutter block">    
 			<h2 class="alt"><a href="<?php echo $home_url; ?>/category/blog" title="Skattle Blog" class="alt">Blog</a></h2>   
 			<?php
 			$nav_args = array(
@@ -119,7 +119,7 @@ $home_url = home_url();
 			<?php } ?> 
 		</nav>
 		
-		<nav class="mob_2 tab_3 desk_2 desk_large_3 single_block">     
+		<nav class="mob_2 tab_3 desk_2 desk_large_3 block">     
 			<h2 class="alt"><a href="<?php echo $home_url; ?>/about" title="About Skattle" class="alt">About</a></h2>    
 			<?php
 			$nav_args = array(

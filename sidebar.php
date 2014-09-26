@@ -30,7 +30,7 @@
 		// Only display hot tags if $nav_menu is not empty
 		if(!(empty($nav_menu))) { ?>
 			<nav class="tab_5 desk_6 desk_large_8 margin_auto centre_text small_border_top">
-				<ul class="double_single_block menu inline_list">
+				<ul class="large_block menu inline_list">
 					<?php 
 					// Remove last |
 					$nav_menu = preg_replace('/\|[^|]*$/', '', $nav_menu);
@@ -120,7 +120,7 @@
 		
 		if($wp_list_pages): ?>
 			<nav class="tab_5 desk_6 desk_large_8 margin_auto centre_text small_border_top">
-				<ul class="double_single_block menu inline_list">
+				<ul class="large_block menu inline_list">
 					<?php echo $wp_list_pages; ?>
 				</ul>
 			</nav>	

@@ -54,14 +54,14 @@ endif; 	?>
 	
 	
 	<?php if($video) { ?>
-		<div class="embed_container double_single_block bg_img">
+		<div class="embed_container large_block bg_img">
 			<?php echo $video; ?>
 		</div>
 	<?php }
 	
 	elseif ($gallery) {
 		$counter = 0;?>
-		<div class="single_slider double_single_block  bg_img">
+		<div class="single_slider large_block  bg_img">
 			<div class="flexslider-container">
 				<div class="flexslider archive_slider loading">
 					<ul class="slides">
