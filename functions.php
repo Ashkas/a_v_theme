@@ -202,6 +202,9 @@ function get_post_thumbnail_caption_relationship($image_id) {
   }
 }
 
+// LIMIT POST REVISION to just 3, to help lessen DB bloat
+define( 'WP_POST_REVISIONS', 3);
+
 ////////////* Sidebars *//////////////
 
 // Register SIdebar
@@ -224,10 +227,6 @@ register_sidebar(array(
 	'before_title' => '',
 	'after_title' => ''
 ));
-
-////////////* Cache *//////////////
-
-require_once( trailingslashit( TEMPLATEPATH ) . 'library/functions/functions-cache.php' );
 
 ////////////* Menu Functions *//////////////
 
@@ -257,18 +256,13 @@ register_nav_menus( array(
 
 require_once( trailingslashit( TEMPLATEPATH ) . 'library/functions/functions-menu.php' );
 
+////////////* Cache *//////////////
+
+require_once( trailingslashit( TEMPLATEPATH ) . 'library/functions/functions-cache.php' );
+
 ////////////* Custom Functions *//////////////
 
 require_once( trailingslashit( TEMPLATEPATH ) . 'library/functions/functions-custom.php' );
-
-// LIMIT POST REVISION to just 3, to help lessen DB bloat
-define( 'WP_POST_REVISIONS', 3);
-
-////////////* SITEMAP *//////////////
-
-// Very simple this, grab the built-in WP sitemap ability and give it a shortcode. Make a page and use [sitemap]
-
-require_once( trailingslashit( TEMPLATEPATH ) . 'library/functions/functions-sitemap.php' );
 
 ////////////* EXTRAS *//////////////
 
