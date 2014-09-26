@@ -1,9 +1,9 @@
 // config
 $px-only:true; /* Refer - http://davidwalsh.name/rem-px-browser-function-sass */
 
-$altFont: "tablet-gothic", Helvetica, Arial, sans-serif;
-$titleFont: "tablet-gothic-condensed", Helvetica, Arial, sans-serif;
-$bodyFont: "adobe-text-pro", Georgia, serif;
+$altFont: Helvetica, Arial, sans-serif;
+$titleFont: Helvetica, Arial, sans-serif;
+$bodyFont: Georgia, serif;
 
 /* ------------------------------------------------------ mixins */
 
@@ -15,9 +15,9 @@ $bodyFont: "adobe-text-pro", Georgia, serif;
 
 @import "modules/css3-mixins.scss";
 
-/* ------------------------------------------------------ Colours */
+/* ------------------------------------------------------ Settings */
 
-@import "partials/colours.scss";
+@import "partials/settings.scss";
 
 /* ------------------------------------------------------ Normalise */
 

@@ -8,9 +8,9 @@
 // config
 $px-only:false;  /* Refer - http://davidwalsh.name/rem-px-browser-function-sass */
 
-$altFont: "ff-ernestine-web-pro", Helvetica, Arial, sans-serif;
-$titleFont:"brandon-grotesque", Helvetica, Arial, sans-serif;
-$bodyFont: "ff-ernestine-web-pro", Georgia, serif;
+$altFont: Helvetica, Arial, sans-serif;
+$titleFont: Helvetica, Arial, sans-serif;
+$bodyFont: Georgia, serif;
 
 
 /* ------------------------------------------------------ mixins */
@@ -23,9 +23,9 @@ $bodyFont: "ff-ernestine-web-pro", Georgia, serif;
 
 @import "modules/css3-mixins.scss";
 
-/* ------------------------------------------------------ Colours */
+/* ------------------------------------------------------ Settings */
 
-@import "partials/colours.scss";
+@import "partials/settings.scss";
 
 /* ------------------------------------------------------ Normalise */
 
